@@ -1,43 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Turning pages with CSS</title>
-  <link rel="stylesheet" href="./css/photography-style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- seo contents, to modify -->
+  <meta name="author" content="Debmalya Pramanik">
+  <meta name="description" content="Data Science and Analyst with a passion for Research and Open Source Development">
+  <meta name="keywords"
+    content="portfolio, python, machine learning, deep learning, data science, data analyst, data engineer, mlops, open source, academic research">
+  <meta name="robots" content="INDEX, FOLLOW">
+
+  <!-- adding google site verification for indexing -->
+  <meta name="google-site-verification" content="ZeaUYtgWMDFeVFqyu7bg1NPTsBfWaIog9DnOkWACF9w" />
+
+  <!-- normalize all browser -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+  <!-- add style sheets -->
+  <link rel="stylesheet" href="./css/photography/style.css">
+  <link rel="stylesheet" href="./css/photography/animation.css">
+  <link rel="stylesheet" href="./css/social-buttons.css" class="stylesheet">
+  
+  <!-- icons library stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Photography Showcase</title>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class="imgLoader"></div>
+  <div class="imgLoader"></div>
 
-<div class="container">
-
-  <h1 class="title">
-    Turning pages<br>with css
-  </h1>
-
-  <div class="credit">
-    * thanks to <a href = "https://twitter.com/amit_sheen">Amit Sheen</a> for <a href = "https://codepen.io/amit_sheen/pen/WNweryv"><code>code</code></a>
-  </div>
-
-  <div class="book">
-    <div class="gap"></div>
-    <div class="pages">
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
-      <div class="page"></div>
+  <div class="container">
+    <h1 class="title">Personal Instagram</h1>
+    <div class="credit">
+      * thanks to <a href="https://twitter.com/amit_sheen">Amit Sheen</a> for <a
+        href="https://codepen.io/amit_sheen/pen/WNweryv"><code>code</code></a>
     </div>
-    <div class="flips">
-      <div class="flip flip1">
-        <div class="flip flip2">
-          <div class="flip flip3">
-            <div class="flip flip4">
-              <div class="flip flip5">
-                <div class="flip flip6">
-                  <div class="flip flip7"></div>
+
+    <!-- books & pages animation -->
+    <div class="book">
+      <div class="gap"></div>
+      <div class="pages">
+        <div class="page"></div>
+        <div class="page"></div>
+        <div class="page"></div>
+        <div class="page"></div>
+        <div class="page"></div>
+        <div class="page"></div>
+      </div>
+      <div class="flips">
+        <div class="flip flip1">
+          <div class="flip flip2">
+            <div class="flip flip3">
+              <div class="flip flip4">
+                <div class="flip flip5">
+                  <div class="flip flip6">
+                    <div class="flip flip7"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -45,13 +67,27 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
+    <!-- end: books & pages animation -->
 
-<!-- <a href="https://twitter.com/amit_sheen" class="twitterLink" target="_top">
-   <img src="https://assets.codepen.io/1948355/twitterLogo2.png" />
-</a> -->
-<!-- partial -->
-  
+    <div class="links">
+      <a href="https://www.instagram.com/d.e.b.m.a.l.y.a/" target="_blank">
+        <button class="icon-btn instagram">
+          <i class="fa fa-instagram"></i>
+        </button>
+      </a>
+      <a href="https://www.facebook.com/iamMrHobo/photos" target="_blank">
+        <button class="icon-btn facebook">
+          <i class="fa fa-facebook"></i>
+        </button>
+      </a>
+    </div>
+
+  </div>
+
+  <a href="https://zenithclown.github.io/" class="homeLink" target="_top">
+    <img src="./assets/images/house.png" /><br>↩<code>homepage</code>
+  </a>
+
 </body>
+
 </html>
