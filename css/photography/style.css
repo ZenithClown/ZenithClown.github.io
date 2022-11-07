@@ -8,7 +8,7 @@
 
 body {
   font-family: "Indie Flower", cursive;
-  background-color: #eee;
+  background-color: rgba(59, 84, 102, 0.5);
   color: #555;
   text-align: center;
   padding: 4em 0;
@@ -18,7 +18,7 @@ body {
 .container {
   position: relative;
   width: 80vw;
-  border: #fff solid 2px;
+  border: rgb(0, 0, 0) solid 2px;
   border-radius: 4px;
   height: 70vh;
 }
@@ -35,15 +35,15 @@ body {
 
 .credit {
   position: absolute;
-  top: 100%;
+  top: 101%;
   left: 0;
-  font-size: 0.9em;
+  font-size: 0.7em;
   text-align: left;
 }
 
 .book {
   position: relative;
-  perspective: 85vh;
+  perspective: 82vh;
   perspective-origin: center 50px;
   transform: scale(1.3);
   filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.25));
@@ -67,8 +67,14 @@ body {
   transform: translate(-50%, 50%);
   background-color: #555;
   width: 10px;
-  height: 5px;
+  height: 10px;
   border-radius: 50%;
+}
+
+.links {
+  position: absolute;
+  top: 90%;
+  left: 46%;
 }
 
 .homeLink {
