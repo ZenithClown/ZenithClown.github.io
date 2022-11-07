@@ -1,6 +1,24 @@
 /********************************************************************
 SCSS Code to Generate Animation Style
 
+NOTE: Original Code has the complete stylesheet as `style.css`, but
+I've seperated the file into two parts:
+  * photography/style.css : contains static contents which controls
+    the alignment and page content; and
+  * photography/animation.css : containing only the content related
+    to images and the turning page of a book effect.
+
+USAGE: SASS (? Syntactically Awesome Style Sheet) & SCSS (Sassy
+Cascading Style Sheet) are advanced version of CSS that can generate
+contents using control statements. Convert SCSS/SASS file to CSS file
+using:
+
+```shell
+# https://sass-lang.com/install
+npm install -g sass # install using npm
+sass --watch <input-file>.scss <output-file>.css
+```
+
 DISCLAIMER: I've NO Idea how SASS (or even HTML, CSS) Works! These
 codes are part of some codes I've found online, and have modified for
 my personal use cases. Proper code references are added whereever
@@ -8,3 +26,4 @@ required.
   Source Code: https://codepen.io/amit_sheen/pen/WNweryv
   SASS/SCSS  : https://sass-lang.com/guide
 ********************************************************************/
+
