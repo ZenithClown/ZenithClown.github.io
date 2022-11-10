@@ -1,71 +1,56 @@
-(function ($) {
-  $(function () {
-
-
-    $(window).on('scroll', function () {
-      fnOnScroll();
-    });
-
-    $(window).on('resize', function () {
-      fnOnResize();
-    });
-
-
-    var agTimeline = $('.js-timeline'),
-      agTimelineLine = $('.js-timeline_line'),
-      agTimelineLineProgress = $('.js-timeline_line-progress'),
-      agTimelinePoint = $('.js-timeline-card_point-box'),
-      agTimelineItem = $('.js-timeline_item'),
-      agOuterHeight = $(window).outerHeight(),
-      agHeight = $(window).height(),
-      f = -1,
-      agFlag = false;
-
-    function fnOnScroll() {
-      agPosY = $(window).scrollTop();
-
-      fnUpdateFrame();
-    }
-
-    function fnOnResize() {
-      agPosY = $(window).scrollTop();
-      agHeight = $(window).height();
-
-      fnUpdateFrame();
-    }
-
-    function fnUpdateWindow() {
-      agFlag = false;
-
-      agTimelineLine.css({
-        top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
-        bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
+(function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
       });
-
-      f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
-    }
-
-    function fnUpdateProgress() {
-      var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
-
-      i = agTop + agPosY - $(window).scrollTop();
-      a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
-      n = agPosY - a + agOuterHeight / 2;
-      i <= agPosY + agOuterHeight / 2 && (n = i - a);
-      agTimelineLineProgress.css({height: n + "px"});
-
-      agTimelineItem.each(function () {
-        var agTop = $(this).find(agTimelinePoint).offset().top;
-
-        (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
-      })
-    }
-
-    function fnUpdateFrame() {
-      agFlag || requestAnimationFrame(fnUpdateWindow);
-      agFlag = true;
-    }
-
-
-  });
+    });
+  };
 })(jQuery);
+
+$("#timeline-1").timeline();

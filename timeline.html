@@ -2,416 +2,150 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Timeline IE</title>
-  <link rel='stylesheet' href='https://rawcdn.githack.com/SochavaAG/example-mycode/master/_common/css/reset.css'><link rel="stylesheet" href="./css/timeline-style.css">
+  <title>CodePen - timeline</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./css/timeline-style.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="ag-timeline-block">
-  <div class="ag-timeline_title-box">
-    <div class="ag-timeline_tagline">Timeline</div>
-    <div class="ag-timeline_title">No Flex</div>
+  <!-- >>> begin sidebar <<<  -->
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bx-code-alt icon'></i>
+      <div class="logo_name kanit-font">dP's Website</div>
+      <i class='bx bx-menu' id="btn"></i>
+    </div>
+
+    <ul class="nav-list">
+      <li>
+        <a href="home.html">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="timeline.html">
+          <i class='bx bxs-institution'></i>
+          <span class="links_name">Education & Work</span>
+        </a>
+        <span class="tooltip">Education & Work</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bxs-spreadsheet'></i>
+          <span class="links_name">Projects</span>
+        </a>
+        <span class="tooltip">Projects</span>
+      </li>
+
+      <!-- end section of sidebar -->
+      <li class="profile">
+        <div class="profile-details">
+          <img src="assets/images/face.jpg" alt="profileImg">
+          <div class="name_job">
+            <div class="name kanit-font"><b>Debmalya Pramanik</b></div>
+            <div class="job">Data Science & Analyst</div>
+          </div>
+        </div>
+        <i class='bx bx-info-circle' id="info"></i>
+      </li>
+    </ul>
   </div>
-  <section class="ag-section">
-    <div class="ag-format-container">
-      <div class="js-timeline ag-timeline">
-        <div class="js-timeline_line ag-timeline_line">
-          <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
-        </div>
-        <div class="ag-timeline_list">
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2021</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 13</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-13.png" class="ag-timeline-card_img" width="64" height="36" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 13</div>
-                  <div class="ag-timeline-card_desc">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                    vel, aliquet nec, vulputate eget, arcu.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
+  <!-- >>> end sidebar <<<  -->
 
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 12</div>
-              </div>
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2020</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-12.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 12</div>
-                  <div class="ag-timeline-card_desc">
-                    Donec pede justo, fringilla
-                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2020</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 11</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-11.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 11</div>
-                  <div class="ag-timeline-card_desc">
-                    Aenean imperdiet. Etiam ultricies
-                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 10</div>
-              </div>
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2019</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-10.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 10</div>
-                  <div class="ag-timeline-card_desc">
-                    Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2019</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 9</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-9.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 9</div>
-                  <div class="ag-timeline-card_desc">
-                    Vivamus elementum semper nisi. Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                    nisi vel augue. Curabitur ullamcorper ultricies nisi.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 8</div>
-              </div>
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2018</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-8.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 8</div>
-                  <div class="ag-timeline-card_desc">
-                    Donec quam felis, ultricies nec, pellentesque eu,
-                    pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                    tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2018</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 7</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-7.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 7</div>
-                  <div class="ag-timeline-card_desc">
-                    Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 6</div>
-              </div>
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2017</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-6.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 6</div>
-                  <div class="ag-timeline-card_desc">
-                    Vivamus elementum semper nisi. Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                    nulla ut metus varius laoreet. Quisque rutrum.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2017</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 5</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-5.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 5</div>
-                  <div class="ag-timeline-card_desc">
-                    Donec pede justo, fringilla
-                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                    nisi vel augue. Curabitur ullamcorper ultricies nisi.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 4</div>
-              </div>
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2016</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-4.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 4</div>
-                  <div class="ag-timeline-card_desc">
-                    Nullam dictum felis eu pede mollis pretium. Integer
-                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                    nulla ut metus varius laoreet.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2016</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 3</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-3.png" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 3</div>
-                  <div class="ag-timeline-card_desc">
-                    Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                    Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                    sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                    eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 2</div>
-              </div>
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2015</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-2.png" class="ag-timeline-card_img" width="640" height="360" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 2</div>
-                  <div class="ag-timeline-card_desc">
-                    Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                    nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                    nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-
-          <div class="js-timeline_item ag-timeline_item">
-            <div class="ag-timeline-card_box">
-              <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                <div class="ag-timeline-card_point">2015</div>
-              </div>
-              <div class="ag-timeline-card_meta-box">
-                <div class="ag-timeline-card_meta">Season 1</div>
-              </div>
-            </div>
-            <div class="ag-timeline-card_item">
-              <div class="ag-timeline-card_inner">
-                <div class="ag-timeline-card_img-box">
-                  <img src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-1.png" class="ag-timeline-card_img" width="640" height="360" />
-                </div>
-                <div class="ag-timeline-card_info">
-                  <div class="ag-timeline-card_title">Season 1</div>
-                  <div class="ag-timeline-card_desc">
-                    Donec pede justo, fringilla
-                    vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                    venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                    tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                    tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-                  </div>
-                </div>
-              </div>
-              <div class="ag-timeline-card_arrow"></div>
-            </div>
-          </div>
-        </div>
+<!-- partial:index.partial.html -->
+<div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">Mustafa Kemal Atatürk</h2>
+    <h3 class="timeline-header__subtitle">FATHER OF THE TURKS</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://i.cdn.ensonhaber.com/resimler/diger/ataturk_3473.jpg"/>
+        <h2 class="timeline__content-title">1881</h2>
+        <p class="timeline__content-desc">He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now inGreece. His father Ali Riza, a customs official turned lumber merchant, died when Mustafawas still a boy. His mother Zubeyde, adevout and strong-willed woman, raised him and his sister.</p>
       </div>
     </div>
-  </section>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://gazetemanifesto.com/wp-content/uploads/2015/11/mustafa-kemal.jpg"/>
+        <h2 class="timeline__content-title">1893</h2>
+        <p class="timeline__content-desc">First enrolled in a traditionalreligious school, he soon switched to a modern school. In 1893, he entered a military highschool where his mathematics teacher gave him the second name Kemal (meaning perfection)in recognition of young Mustafa's superior achievement.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://www.volpeypir.com/upload/3732.jpg"/>
+        <h2 class="timeline__content-title">1905</h2>
+        <p class="timeline__content-desc">In 1905, Mustafa Kemal graduated from the War Academy in Istanbul with the rank of Staff Captain. Posted in Damascus, he started with several colleagues, a clandestinesociety called "Homeland and Freedom" to fight against the Sultan'sdespotism.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://cdn.yemek.com/uploads/2014/11/ataturk-10-kasim.jpg"/>
+        <h2 class="timeline__content-title">1908</h2>
+        <p class="timeline__content-desc">In 1908 he helped the group of officers who toppled the Sultan. Mustafa Kemal'scareer flourished as he won his heroism in the far corners of the Ottoman Empire,including Albania and Tripoli. He also briefly served as a staff officer in Salonica andIstanbul and as a military attache in Sofia.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://ataturk.istanbul.gov.tr/GalleryLibrary/12.jpg"/>
+        <h2 class="timeline__content-title">1915</h2>
+        <p class="timeline__content-desc">In 1915, when Dardanelles campaign was launched, Colonel Mustafa Kemal became anational hero by winning successive victories and finally repelling the invaders.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://blog.istanbul1881.com/wp-content/uploads/2016/08/atat%C3%BCrk-%C3%BCn-inan%C4%B1lmaz-karizmatik-fotograf%C4%B1_861050.jpg"/>
+        <h2 class="timeline__content-title">1916</h2>
+        <p class="timeline__content-desc">Promotedto general in 1916, at age 35, he liberated two major provinces in eastern Turkey thatyear. In the next two years, he served as commander of several Ottoman armies inPalestine, Aleppo, and elsewhere, achieving another major victory by stopping the enemyadvance at Aleppo.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://manisanokta.com/wp-content/uploads/2014/07/ataturk-20.jpg"/>
+        <h2 class="timeline__content-title">1919</h2>
+        <p class="timeline__content-desc">On May 19, 1919, Mustafa Kemal Pasha landed in the Black Sea port of Samsun to startthe War of Independence. In defiance of the Sultan's government, he rallied a liberationarmy in Anatolia and convened the Congress of Erzurum and Sivas which established thebasis for the new national effort under his leadership.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://www.volpeypir.com/upload/3732.jpg"/>
+        <h2 class="timeline__content-title">1920</h2>
+        <p class="timeline__content-desc">
+          On April 23, 1920, the GrandNational Assembly was inaugurated. Mustafa Kemal Pasha was elected to its Presidency.
+          Fighting on many fronts, he led his forces to victory against rebels and invadingarmies. Following the Turkish triumph at the two major battles at Inonu in Western Turkey,the Grand National Assembly conferred on Mustafa Kemal Pasha the title ofCommander-in-Chief with the rank of Marshal.
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://sanatkaravani.com/wp-content/uploads/2015/11/ataturk-4.jpg"/>
+        <h2 class="timeline__content-title">1922</h2>
+        <p class="timeline__content-desc">At the end of August 1922, the Turkish armieswon their ultimate victory. Within a few weeks, the Turkish mainland was completelyliberated, the armistice signed, and the rule of the Ottoman dynasty abolished</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="https://turkcetarih.com/wp-content/uploads/2015/05/Atat%C3%BCrkveCumhuriyet.jpg"/>
+        <h2 class="timeline__content-title">1923</h2>
+        <p class="timeline__content-desc">In July 1923, the national government signed the Lausanne Treaty with Great Britain,France, Greece, Italy, and others. In mid-October, Ankara became the capital of the new Turkish State. On October 29, the Republic was proclaimed and Mustafa Kemal Pasha wasunanimously elected President of the Republic.</p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="https://pbs.twimg.com/media/Cw69H8pXUAEaSqa.jpg"/>
+        <h2 class="timeline__content-title">1934</h2>
+        <p class="timeline__content-desc">
+          The account of Atatürk's fifteen year Presidency is a saga of dramatic modernization.With indefatigable determination, he created a new political and legal system, abolished the Caliphate and made both government and education secular, gave equal rights to women,changed the alphabet and the attire, and advanced the arts and the sciences, agricultureand industry.
+          In 1934, when the surname law was adopted, the national parliament gave him the name <i><strong>"Atatürk" (Father of the Turks)</strong></i>
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+      <div class="timeline__content"><img class="timeline__img" src="http://www.bik.gov.tr/wp-content/uploads/2016/11/20161110_2_20037273_15856882.jpg?fit=1024%2C863"/>
+        <h2 class="timeline__content-title">1938</h2>
+        <p class="timeline__content-desc">On November 10, 1938, following an illness of a few months, the national liberator and the Father of modern Turkey died. But his legacy to his people and to the world endures.</p>
+      </div>
+    </div>
+  </div>
 </div>
+<div class="demo-footer"><a href="http://www.turkishnews.com/Ataturk/life.htm" target="_blank">Source/Kaynak</a></div>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script><script  src="./js/timeline.js"></script>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./js/timeline.js"></script>
+  <script src="js/sidebar.js"></script>
 </body>
 </html>
