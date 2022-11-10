@@ -33,6 +33,15 @@
   color: #0077b5;
 }
 
+.instagram {
+  color: #000000;
+}
+
+.facebook {
+  color: #1877F2;
+  opacity: 0.7;
+}
+
 .icon-btn:hover {
   transform: scale(1.10);
   color: #FFFFFF;
@@ -43,5 +52,13 @@
 }
 
 .github:hover {
+  background-color: black;
+}
+
+.instagram:hover {
+  background-color: #E4405F;
+}
+
+.facebook:hover {
   background-color: black;
 }

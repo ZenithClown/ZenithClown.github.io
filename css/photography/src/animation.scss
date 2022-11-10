@@ -1,0 +1,200 @@
+/********************************************************************
+SCSS Code to Generate Animation Style
+
+NOTE: Original Code has the complete stylesheet as `style.css`, but
+I've seperated the file into two parts:
+  * photography/style.css : contains static contents which controls
+  the alignment and page content; and
+  * photography/animation.css : containing only the content related
+  to images and the turning page of a book effect.
+
+THIS FILE IS NOT YET COMPILED. ORIGINAL CSS FILE IS CURRENTLY IN USE.
+TODO/Check documentation to automatically generate CSS file.
+
+USAGE: SASS (? Syntactically Awesome Style Sheet) & SCSS (Sassy
+Cascading Style Sheet) are advanced version of CSS that can generate
+contents using control statements. Convert SCSS/SASS file to CSS file
+using:
+
+```shell
+# https://sass-lang.com/install
+npm install -g sass # install using npm
+sass --watch <input-file>.scss <output-file>.css
+```
+
+DISCLAIMER: I've NO Idea how SASS (or even HTML, CSS) Works! These
+codes are part of some codes I've found online, and have modified for
+my personal use cases. Proper code references are added whereever
+required.
+  Source Code  : https://codepen.io/amit_sheen/pen/WNweryv
+  SASS/SCSS    : https://sass-lang.com/guide
+  Online Convert : https://www.cssportal.com/scss-to-css/
+********************************************************************/
+
+$speel: 5s; // animation speed
+$bookAngle: 60deg; // ? orientation of the book
+$borderColor: rgb(60, 50, 95); // book border color
+
+$images:
+// for now keep random five images from `picsum.photos`
+// TODO parameterize to get any/all images from a URL/static folder
+url('https://picsum.photos/420/300?random=1'),
+url('https://picsum.photos/420/300?random=2'),
+url('https://picsum.photos/420/300?random=3'),
+url('https://picsum.photos/420/300?random=4'),
+url('https://picsum.photos/420/300?random=5'),
+url('https://picsum.photos/420/300?random=1');
+
+// preload to images
+.imgLoader {
+  position: fixed;
+  animation: preLoad 1s steps(1);
+  width: 1px;
+  height: 1px;
+
+  @keyframes preLoad {
+  @for $i from 0 through 4 { // ? get length of `$images`
+    // ! originally: `#{$i * 10}%` - `%` sign is not printed with online converter
+    #{$i * 10%} { background-image: nth($images, ($i + 1)); } // sass-lint:disable-line border-zero
+  }
+  100% { display: none; }
+  }
+}
+
+// page animation
+.page {
+  width: 210px;
+  height: 300px;
+  background-color: #bbb;
+  position: absolute;
+  top: 0px; right: 50%;
+  transform-origin: 100% 100%;
+  border: solid $borderColor 2px;
+  background-size: 420px 300px;
+  background-position: center;
+  transform-style: preserve-3d;
+
+  &:nth-child(1) {transform: rotateX($bookAngle) rotateY(3deg); }
+  &:nth-child(2) { transform: rotateX($bookAngle) rotateY(4.5deg); }
+  &:nth-child(3) {
+    transform: rotateX($bookAngle) rotateY(6deg);
+    animation: nextPage $speed*5 infinite $speed*-4.8 steps(1);
+    background-size: 420px 300px;
+    background-position: -2px -2px;
+  }
+
+  &:nth-child(4) { transform: rotateX($bookAngle) rotateY(177deg); }
+  &:nth-child(5) { transform: rotateX($bookAngle) rotateY(175.5deg); }
+  &:nth-child(6) {
+    transform: rotateX($bookAngle) rotateY(174deg);
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      width: 210px;
+      height: 300px;
+      position: absolute;
+      top: 0px; right: 0%;
+      transform-origin: center;
+      transform: rotateY(180deg);
+      animation: nextPage $speed*5 $speed*-4 infinite steps(1);
+      background-size: 420px 300px;
+      background-position: 100% -2px;
+    }
+  }
+
+  @keyframes nextPage {
+    @for $i from 0 through 4 { // ? get length of `$images`
+      // ! originally: `#{$i * 10}%` - `%` sign is not printed with online converter
+      #{$i * 20%} { background-image: nth($images, ($i + 1)); }
+    }
+  }
+}
+
+.pages, .flips {
+  transform-style: preserve-3d;
+}
+
+.flip {
+  width: 32px;
+  height: 300px;
+  position: absolute;
+  top: 0px;
+  transform-origin: 100% 100%;
+  right: 100%;
+  border: solid $borderColor;
+  border-width: 2px 0px;
+  perspective: 4200px;
+  perspective-origin: center; 
+  transform-style: preserve-3d;
+  background-size: 420px 300px;
+
+  &::after {
+      content: '';
+      position: absolute;
+      top: 0px; right: 0%;
+      width: 100%; height: 100%;
+      transform-origin: center;
+      background-size: 420px 300px;
+  }
+
+  &.flip1 {
+      right: 50%;
+      animation: flip1 $speed infinite ease-in-out;
+      border-width: 2px 2px 2px 0;
+
+      &::after {
+          animation: nextFlip1 $speed*5 $speed*-4 infinite steps(1);
+      }
+  }
+
+  &:not(.flip1) {
+      right: calc(100% - 2px);
+      top: -2px;
+      transform-origin: right;
+      animation: flip2 $speed ease-in-out infinite;
+  }
+
+  @for $i from 2 through 7 {
+      &.flip#{$i}::after { animation: nextFlip#{$i} $speed*5 $speed*-4 infinite steps(1); }
+  }
+  
+  &.flip7 {
+      width: 30px;
+      border-width: 2px 0px 2px 2px;
+      &::after { animation: nextFlip7 $speed*5 $speed*-4 infinite steps(1); }
+  }
+
+  @keyframes flip1 {
+      0%, 20% { transform: rotateX($bookAngle) rotateY(6deg); }
+      80%, 100% { transform: rotateX($bookAngle) rotateY(174deg); }
+  }
+
+  @keyframes flip2 {
+      0%, 20% { transform: rotateY(0deg) translateY(0px); }
+      50% { transform: rotateY(-15deg) translateY(0px); }
+  }
+}
+
+@keyframes nextFlip1 {
+  @for $i from 0 through 4 {
+      #{$i * 20}% { background-image: nth($images, ($i + 1)); background-position: -178px -2px; transform: rotateY(0deg); }
+      #{10 + ($i * 20)}% { background-image: nth($images, ($i + 2)); background-position: -210px -2px; transform: rotateY(180deg); }
+  }
+}
+
+@for $i from 2 through 6 {
+  @keyframes nextFlip#{$i} {
+      @for $j from 0 through 4 {
+          #{$j * 20}% { background-image: nth($images, ($j + 1)); background-position: #{-148 + (($i - 2) * 30)}px -2px; transform: rotateY(0deg); }
+          #{((10 + ($j * 20)) + (($i - 1) * 0.5))}% { background-image: nth($images, ($j + 2)); background-position: #{-238 - (($i - 2) * 30)}px -2px; transform: rotateY(180deg); }
+      }
+  }
+}
+
+@keyframes nextFlip7 {
+  @for $i from 0 through 4 {
+      #{$i * 20}% { background-image: nth($images, ($i + 1)); background-position: -2px -2px; transform: rotateY(0deg); }
+      #{13 + ($i * 20)}% { background-image: nth($images, ($i + 2)); background-position: -388px -2px; transform: rotateY(180deg); }
+  }
+}
