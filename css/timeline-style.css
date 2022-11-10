@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+@import url("https://fonts.googleapis.com/css2?family=Kolker+Brush");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300");
 .timeline {
   display: flex;
   margin: 0 auto;
@@ -138,16 +140,16 @@
 }
 .timeline-header__title {
   color: #fff;
-  font-size: 46px;
-  font-family: Cardo;
+  font-size: 76px;
+  font-family: "Kolker Brush", sans-serif;
   font-weight: normal;
   margin: 0;
 }
 .timeline-header__subtitle {
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Pathway Gothic One", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 5px;
-  margin: 10px 0 0 0;
+  margin: 2px 0 0 0;
   font-weight: normal;
 }
