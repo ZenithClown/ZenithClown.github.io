@@ -151,13 +151,3 @@
   margin: 10px 0 0 0;
   font-weight: normal;
 }
-
-.demo-footer {
-  padding: 60px 0;
-  text-align: center;
-}
-.demo-footer a {
-  color: #999;
-  display: inline-block;
-  font-family: Cardo;
-}
