@@ -1,7 +1,11 @@
 /* sidebar section */
 /* sidebar is altered from CodingLab tutorial as per need */
 /* https://www.youtube.com/watch?v=wEfaoAa99XY&ab_channel=CodingLab */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .sidebar{
   position: fixed;
   left: 0;
@@ -12,6 +16,7 @@
   padding: 6px 14px;
   z-index: 99;
   transition: all 0.5s ease;
+  font-family: "Poppins" , sans-serif;
 }
 
 .sidebar.open{

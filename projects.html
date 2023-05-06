@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>home</title>
+  <title>Projects</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/fonts.css">
@@ -82,67 +82,60 @@
 
   <main class="main-content-section">
     <section class="content-container">
-      <div class="about-content">
-        <div class="col">
-          <h1 class="main-title">Hi all, <span class="dblock"> I'm <span class="name">Debmalya Pramanik</span></span>
-          </h1>
-          <span class="post-name">Full Stack Software Developer</span>
-          <p class="ab-content">
-            A passionate Full Stack Software Developer having an experience of building Web and Mobile applications
-            with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
-          </p>
-          <div>
-            <a class="icon-btn instagram" href="https://www.instagram.com/d.e.b.m.a.l.y.a/" target="_blank">
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a class="icon-btn facebook" href="https://www.facebook.com/iamMrHobo/photos" target="_blank">
-              <i class="fa fa-facebook"></i>
-            </a>
+      <h1 class="subtitle"> Projects</h1>
+      <p class="subtitle-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fugiat commodi quasi aperiam culpa, ea eaque
+        tempora placeat.
+      </p>
+      <ul class="accordion-list">
+        <li class="active">
+          <div class="img-box">
+            <img src="assets/images/photography/botanical_garden_road.jpg" alt="" />
           </div>
-        </div>
-        <div class="col">
-          <img src="assets/images/thinking-about.gif" alt="" class="img-fluid" />
-        </div>
-      </div>
-    </section>
-    <section class="skills-section">
-      <div class="content-container">
-        <div class="about-content">
-          <div class="col">
-            <img src="assets/images/working.gif" alt="" class="img-fluid" />
+          <h3>How much does a website cost?</h3>
+          <div class="answer">
+            <p>While we would love to be able to give a definitive, fixed price for a website, it really depends on the
+              specific needs for each individual business. If one business needs a website comprised of five pages,
+              while another has a substantially larger site of over 100 pages - obviously those projects are going to
+              command different price points.</p>
+
+            <p>With that being said - here are some general guidelines on what to expect from a pricing standpoint.</p>
           </div>
-          <div class="col">
-            <h2 class="subtitle"> Skills & Expertise </h2>
-            <p class="subtitle-text">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
-            <div class="skills-icons">
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-            </div> 
+        </li>
+        <li>
+          <div class="img-box">
+            <img src="assets/images/photography/botanical_garden_road.jpg" alt="" />
           </div>
-        </div>
-      </div>
+          <h3>Are there any monthly fees?</h3>
+          <div class="answer">
+            <p>This will vary depending on the type of project. For logo & branding projects, fees will be one-time
+              costs. For website projects, we will typically charge a monthly fee, depending on the level of service you
+              choose. To view a full list of our monthly packages, click here.</p>
+          </div>
+        </li>
+        <li>
+          <div class="img-box">
+            <img src="assets/images/photography/botanical_garden_road.jpg" alt="" />
+          </div>
+          <h3>Are there any monthly fees?</h3>
+          <div class="answer">
+            <p>This will vary depending on the type of project. For logo & branding projects, fees will be one-time
+              costs. For website projects, we will typically charge a monthly fee, depending on the level of service you
+              choose. To view a full list of our monthly packages, click here.</p>
+          </div>
+        </li>
+        <li>
+          <div class="img-box">
+            <img src="assets/images/photography/botanical_garden_road.jpg" alt="" />
+          </div>
+          <h3>Are there any monthly fees?</h3>
+          <div class="answer">
+            <p>This will vary depending on the type of project. For logo & branding projects, fees will be one-time
+              costs. For website projects, we will typically charge a monthly fee, depending on the level of service you
+              choose. To view a full list of our monthly packages, click here.</p>
+          </div>
+        </li>
+      </ul>
     </section>
     <section class="contact-section">
       <div class="content-container">
@@ -177,17 +170,24 @@
   </main>
   <!-- load all script files -->
   <script src="js/sidebar.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script>
-    // Materialize - Initializers
+
     $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+      $('.accordion-list > li > .answer').hide();
+
+      $('.accordion-list > li').click(function () {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+          $(".accordion-list > li.active .answer").slideUp();
+          $(".accordion-list > li.active").removeClass("active");
+          $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
+      });
+
+    });
   </script>
 </body>
 

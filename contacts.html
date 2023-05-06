@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>home</title>
+  <title>Contacts</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="css/fonts.css">
@@ -82,65 +82,17 @@
 
   <main class="main-content-section">
     <section class="content-container">
-      <div class="about-content">
+      <h1 class="subtitle"> Contacts</h1>
+      <p class="subtitle-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fugiat commodi quasi aperiam culpa, ea eaque
+        tempora placeat.
+      </p>
+      <div class="about-content contactform-content">
         <div class="col">
-          <h1 class="main-title">Hi all, <span class="dblock"> I'm <span class="name">Debmalya Pramanik</span></span>
-          </h1>
-          <span class="post-name">Full Stack Software Developer</span>
-          <p class="ab-content">
-            A passionate Full Stack Software Developer having an experience of building Web and Mobile applications
-            with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.
-          </p>
-          <div>
-            <a class="icon-btn instagram" href="https://www.instagram.com/d.e.b.m.a.l.y.a/" target="_blank">
-              <i class="fa fa-instagram"></i>
-            </a>
-            <a class="icon-btn facebook" href="https://www.facebook.com/iamMrHobo/photos" target="_blank">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </div>
+          <img src="assets/images/contact.gif" alt="" class="img-fluid" />
         </div>
         <div class="col">
-          <img src="assets/images/thinking-about.gif" alt="" class="img-fluid" />
-        </div>
-      </div>
-    </section>
-    <section class="skills-section">
-      <div class="content-container">
-        <div class="about-content">
-          <div class="col">
-            <img src="assets/images/working.gif" alt="" class="img-fluid" />
-          </div>
-          <div class="col">
-            <h2 class="subtitle"> Skills & Expertise </h2>
-            <p class="subtitle-text">CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</p>
-            <div class="skills-icons">
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-              <div class="icons">
-                <img src="assets/images/Python-logo-notext.svg.png" alt="" />
-              </div>
-            </div> 
-          </div>
+          <iframe class="contact-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdIrm2DMWojiaBB3Ba4XNUOoRSJGkBU4rl49w79syRBJoUpcg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
         </div>
       </div>
     </section>
@@ -177,17 +129,24 @@
   </main>
   <!-- load all script files -->
   <script src="js/sidebar.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script>
-    // Materialize - Initializers
+
     $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+      $('.accordion-list > li > .answer').hide();
+
+      $('.accordion-list > li').click(function () {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+          $(".accordion-list > li.active .answer").slideUp();
+          $(".accordion-list > li.active").removeClass("active");
+          $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
+      });
+
+    });
   </script>
 </body>
 
