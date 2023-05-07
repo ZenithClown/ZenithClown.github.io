@@ -1,6 +1,10 @@
 /*
   * Social Buttons CSS Style Sheet
   ! on hover, each element color and transition is also controlled
+
+  CDNJS Library: https://cdnjs.com/libraries/font-awesome
+  Fontawesome Icons: https://fontawesome.com/
+  Simple Icons: https://simpleicons.org/
 */
 
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
@@ -12,11 +16,11 @@
 }
 
 .icon-btn {
-  margin-left: auto;
+  scale: 2;
+  margin-left: auto; 
   width: 30px;
   height: 30px;
   border: 0;
-  color: #FFFFFF;
   cursor: pointer;
   font-size: 20px;
   line-height: 30px;
@@ -25,40 +29,42 @@
   margin: 4px;
 }
 
-.github {
-  color: black;
-}
-
-.linkedin {
-  color: #0077b5;
-}
-
-.instagram {
-  color: #000000;
-}
-
-.facebook {
-  color: #1877F2;
-  opacity: 0.7;
-}
-
 .icon-btn:hover {
   transform: scale(1.10);
-  color: #FFFFFF;
 }
 
-.linkedin:hover {
-  background-color: #0077b5;
+.fa-linkedin-in {
+  color: #0A66C2;
 }
 
-.github:hover {
-  background-color: black;
+.fa-github {
+  color: #181717;
 }
 
-.instagram:hover {
-  background-color: #E4405F;
+.fa-gitlab {
+  color: #FC6D26;
 }
 
-.facebook:hover {
-  background-color: black;
+.fa-researchgate {
+  color: #00CCBB;
+}
+
+.fa-kaggle {
+  color: #20BEFF;
+}
+
+.fa-stack-overflow {
+  color: #F58025;
+}
+
+.fa-hackerrank {
+  color: #00EA64;
+}
+
+.fa-instagram {
+  color: #E4405F;
+}
+
+.fa-facebook-f {
+  color: #1877F2;
 }

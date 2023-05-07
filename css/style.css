@@ -181,6 +181,7 @@ sub {
   padding: 0 30px;
 }
 .about-content{
+  height: 100vh;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
