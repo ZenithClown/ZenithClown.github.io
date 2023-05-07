@@ -1,10 +1,10 @@
 <div align = "center">
   <table style="width:100%; border-collapse: collapse; border: none;">
     <tr>
-      <th><a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "175" width = "275" src = "./assets/logo.png"></a></th>
+      <th><a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "175" width = "275" src = "./favicon/logo_small.png"></a></th>
       <th>
         <h1 align = "center">
-          Portfolio Website <a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "32" width = "32" src = "./favicon/logo_small.png"></a> <br>
+          Portfolio Website <a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "32" width = "32" src = "./assets/readme/www-logo.png"></a> <br>
           <a href = "https://www.linkedin.com/in/dpramanik/"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/linkedin.svg"/></a>
           <a href = "https://github.com/ZenithClown"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/github.svg"/></a>
           <a href = "https://gitlab.com/ZenithClown/"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/gitlab.svg"/></a>
