@@ -135,7 +135,7 @@ sub {
 
   .reference {
     font-size: xx-small;
-    color: darkblue;
+    color: rgb(255, 255, 255);
   }
 }
 
