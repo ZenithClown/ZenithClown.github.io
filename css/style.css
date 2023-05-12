@@ -181,7 +181,7 @@ sub {
   padding: 0 30px;
 }
 .about-content{
-  height: 100vh;
+  min-height: 100vh;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -438,7 +438,10 @@ ul.accordion-list li .img-box img{
   margin: 30px 0 0;
 }
 
-@media (min-width: 768px) {
+.contactform-content{
+  min-height: unset;
+}
+@media (min-width: 992px) {
   .skills-section .subtitle, .skills-section .subtitle-text {
     text-align: left;
     padding: 0 15px;
@@ -463,11 +466,28 @@ ul.accordion-list li .img-box img{
 }
 
 @media (max-width: 992px) {
+  .about-content{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-content .col{
+    flex: 1;
+    max-width: 100%;
+  }
   .about-content .main-title {
     font-size: 26px;
+    text-align: center;
   }
   .about-content .post-name {
     font-size: 18px;
+    text-align: center;
+    justify-content: center;
+  }
+  .about-content .ab-content{
+    text-align: center;
+  }
+  .about-content .ab-content + div , .about-content p{
+    text-align: center;
   }
   .app-info.support-box .info-img {
     max-width: 60%;
@@ -486,6 +506,7 @@ ul.accordion-list li .img-box img{
   .contactform-content .col{
     max-width: 100%;
     flex: 0 0 100%;
+    min-width: 100%;
   }
   .contactform-content .img-fluid{
     display: none;
@@ -526,6 +547,7 @@ ul.accordion-list li .img-box img{
     flex-direction: column-reverse;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px 30px 30px;
     text-align: center;
   }
