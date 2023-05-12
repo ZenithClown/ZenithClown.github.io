@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Redirect to Home Page in "10" Seconds -->
+  <!-- https://www.tutorialspoint.com/How-to-redirect-URL-to-the-different-website-after-few-seconds# -->
+  <meta http-equiv = "refresh" content = "10; url = home.html" />
+
   <!-- seo contents, to modify -->
   <meta name="author" content="Debmalya Pramanik">
   <meta name="description" content="Data Science and Analyst with a passion for Research and Open Source Development">
@@ -41,7 +45,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" href="css/landing-star-animations.css">
-  <!-- <link rel="stylesheet" href="css/bootstrap-element.css"> -->
 
   <!-- add fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,6 +162,7 @@
             <p class="small-font">For the world, I'm a <br><span class="typed praise-font big-font-5-center"
                 data-typed-items="pythonista, machine learning expert, data engineer, data analyst, data scientist"></span>
             </p>
+            <p class="reference"><i><b>Auto-Redirecting</b> to Homepage in <span id="countdowntimer">10 </span> Seconds...</i></p>
           </div>
         </div>
       </div>
@@ -190,6 +194,18 @@
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       })
     })
+  </script>
+
+  <script type="text/javascript">
+    // auto redirect countdown timer
+    // https://stackoverflow.com/a/31106382/6623589
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    document.getElementById("countdowntimer").textContent = timeleft;
+    if(timeleft <= 0)
+        clearInterval(downloadTimer);
+    },1000);
   </script>
 </body>
 
