@@ -1,3 +1,6 @@
 [submodule "code/modules/optim"]
 	path = code/modules/optim
 	url = https://gist.github.com/ZenithClown/277ddc84fa10239b4a24a366813761a5.git
+[submodule "code/modules/pandas_"]
+	path = code/modules/pandas_
+	url = https://gist.github.com/ZenithClown/e4a0183d9124b3b78cce5a5dc8607323.git

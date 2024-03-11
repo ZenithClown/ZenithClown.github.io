@@ -10,6 +10,9 @@ commands:
   # *** Sphix API Documentation Generator *** #
   optim-doc:
     windows: sphinx-apidoc -o . ../optim/
+  
+  pandas_-doc:
+    windows: sphinx-apidoc -o . ../pandas_/
 
 env_specs:
   default:
