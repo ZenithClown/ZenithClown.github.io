@@ -5,12 +5,18 @@ commands:
   # ? quickstart: required for initializng the project, typically run once
   quickstart:
     unix: sphinx-quickstart
+    windows: sphinx-quickstart
+
+  # *** Sphix API Documentation Generator *** #
+  optim-doc:
+    windows: sphinx-apidoc -o . ../optim/
 
 env_specs:
   default:
     packages:
       - python
       - sphinx>=7.2.6
+      - sphinx_rtd_theme>=2.0.0
 
 channels:
   - defaults

@@ -5,3 +5,4 @@ commands:
   # the list of commands that are developed for easy access, update of the added submodules
   optim-add:
     unix: git submodule add https://gist.github.com/ZenithClown/277ddc84fa10239b4a24a366813761a5.git optim
+    windows: git submodule add https://gist.github.com/ZenithClown/277ddc84fa10239b4a24a366813761a5.git optim
