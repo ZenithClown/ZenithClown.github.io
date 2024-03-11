@@ -1,0 +1,7 @@
+Optimization Module (optim)
+===========================
+
+.. toctree::
+   :maxdepth: 4
+
+   linprog
