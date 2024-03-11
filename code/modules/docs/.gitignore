@@ -1,2 +1,7 @@
 # ignore generated environment by `anaconda-project run`
 envs/
+
+# ignore sphinx-docs created files
+_build/doctrees/
+_build/html/_static/
+_build/html/_sources/
