@@ -1,0 +1,17 @@
+name: Generate Sphinx Documentations
+description: Use the `anaconda-project run `< options />` to create sphinx documentations.
+
+commands:
+  # ? quickstart: required for initializng the project, typically run once
+  quickstart:
+    unix: sphinx-quickstart
+
+env_specs:
+  default:
+    packages:
+      - python
+      - sphinx>=7.2.6
+
+channels:
+  - defaults
+  - https://conda.anaconda.org/conda-forge

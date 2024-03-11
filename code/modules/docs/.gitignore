@@ -1,0 +1,2 @@
+# ignore generated environment by `anaconda-project run`
+envs/
