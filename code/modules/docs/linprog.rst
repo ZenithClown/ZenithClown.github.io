@@ -2,6 +2,6 @@ Linear Programming
 ==================
 
 .. automodule:: linprog
-   :members:
-   :undoc-members:
-   :show-inheritance:
+    :members:
+    :undoc-members:
+    :show-inheritance:
