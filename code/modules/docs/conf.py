@@ -8,6 +8,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath("../optim/"))
+sys.path.insert(0, os.path.abspath("../pandas_/"))
 
 project = 'Gists Codebase'
 copyright = '2024, Debmalya Pramanik'

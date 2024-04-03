@@ -1,22 +1,11 @@
-Optimization Module (optim)
-===========================
+Code Gist(s)
+============
 
-The module is defined to collate some essentials optimization functions in python. For example, the :doc:`linprog <linprog>`
-is defined to optimize the usage of Linear Programming using SciPy/PuLP.
-
-.. toctree::
-   :maxdepth: 4
-
-   linprog
-
-
-Pandas Utility Functions (pandas\_)
-===================================
-
-A set of utility functions extended from the `pandas` module to reduce manual effort on code development. For more information
-check :doc:`pandas_ <pandas_>` file.
+The codes are categorized based on their usage sqpcifications. Most of my codes are dedicated towards Exploratory Data Analysis (EDA),
+Artificial Intelligence (AI), and/or Machine Learning (ML) using python. Please check individual sections for more informations.
 
 .. toctree::
-   :maxdepth: 4
-
-   pandas_
+   :maxdepth: 2
+   
+   optimization
+   pandas_utils
