@@ -36,5 +36,6 @@
 
 1. [Tarikul Islam Anik](https://github.com/Tarikul-Islam-Anik) on providing [animated-fluent-emojis](https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis), used in readme and website.
 2. [Vince Polston](https://www.youtube.com/watch?v=cJDdVVjjoK0) on providing details about code documentations using `sphinx` module.
+3. [Petar Gyurov](https://github.com/petargyurov) on providing [virtual bookshelf](https://github.com/petargyurov/virtual-bookshelf) template.
 
 </div>
