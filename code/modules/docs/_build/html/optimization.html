@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Optimization Module (optim) &mdash; Gists Codebase v0.0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+  <title>Optimization Problems (optim) &mdash; Gists Codebase v0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
 
   
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=2fea6348"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -46,7 +47,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Code Gist(s)</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Optimization Module (<cite>optim</cite>)</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Optimization Problems (<cite>optim</cite>)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="linprog.html">Linear Programming</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wrappers.html">wrappers module</a></li>
 </ul>
@@ -72,7 +73,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="modules.html">Code Gist(s)</a></li>
-      <li class="breadcrumb-item active">Optimization Module (<cite>optim</cite>)</li>
+      <li class="breadcrumb-item active">Optimization Problems (<cite>optim</cite>)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/optimization.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -82,21 +83,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="optimization-module-optim">
-<h1>Optimization Module (<cite>optim</cite>)<a class="headerlink" href="#optimization-module-optim" title="Link to this heading"></a></h1>
-<p>The module is defined to collate some essentials optimization functions in python. For example, the <a class="reference internal" href="linprog.html"><span class="doc">linprog</span></a>
-is defined to optimize the usage of Linear Programming using SciPy/PuLP.</p>
+  <section id="optimization-problems-optim">
+<h1>Optimization Problems (<cite>optim</cite>)<a class="headerlink" href="#optimization-problems-optim" title="Permalink to this heading"></a></h1>
+<div class="docutils container">
+<p><a class="reference external" href="https://zenithclown.github.io/"><img alt="Zenith Clown" src="https://img.shields.io/badge/🧠-Debmalya_Pramanik-blue" /></a> <a class="reference external" href="https://github.com/ZenithClown"><img alt="REPO:ADMIN" src="https://img.shields.io/badge/👔-ZenithClown-2A8542" /></a> <a class="reference external" href="https://zenithclown.github.io/code/modules/docs/_build/html/optim.html"><img alt="CODE:DOCUMENTATION" src="https://img.shields.io/badge/👔-DOCS-42F5DD" /></a></p>
+<p>✨ <em>utility function related
+to</em><code class="docutils literal notranslate"><span class="pre">`scipy.optimize.linprog</span></code> &lt;<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linprog.html</a>&gt;`__<em>and/or</em><code class="docutils literal notranslate"><span class="pre">`pulp</span></code> &lt;<a class="reference external" href="https://coin-or.github.io/pulp/">https://coin-or.github.io/pulp/</a>&gt;`__<em>for
+optimization problem</em> - <strong>``linprog.py``</strong> ✨</p>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="linprog.html">Linear Programming</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linprog.html#linprog.LpObject"><code class="docutils literal notranslate"><span class="pre">LpObject</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="linprog.html">Linear Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrappers.html">wrappers module</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="wrappers.html">wrappers module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="wrappers.html#wrappers.profile"><code class="docutils literal notranslate"><span class="pre">profile()</span></code></a></li>
-</ul>
-</li>
-</ul>
+</div>
+<div class="docutils container">
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Linear_programming">Linear
+Programming</a> is
+defined as a method of achieving the best outcome using a
+mathematical model whose relationships are represented by linear
+relationships. In contrast, to <a class="reference external" href="https://en.wikipedia.org/wiki/Nonlinear_programming">Non-Linear
+Programming</a>
+a basic assumption of <em>linear programming</em> is that the relationships
+between the decision variables, constraints and the objective
+functions are linear - meaning they can be represented by a straight
+line.
+<a class="reference external" href="https://www.linkedin.com/advice/0/how-can-you-tell-problem-requires-linear-nonlinear-i77jc">[1]</a>
+<a class="reference external" href="https://www2.kuet.ac.bd/icmiee2014/wp-content/uploads/2015/02/ICMIEE-PI-140224.pdf">[2]</a>
+<a class="reference external" href="https://www.matec-conferences.org/articles/matecconf/pdf/2018/42/matecconf_qpi2018_04004.pdf">[3]</a></p>
+<p>The variables (<span class="math notranslate nohighlight">\(x_1, x_2, ..., x_n\)</span>) of both the programming
+are either <code class="docutils literal notranslate"><span class="pre">integer</span></code>, or <code class="docutils literal notranslate"><span class="pre">continuos</span></code>, if all the variables are
+<code class="docutils literal notranslate"><span class="pre">integer</span></code> then it is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Integer_programming">Integer
+Programming</a>,
+however, most of the real world problems are <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fenrg.2020.00049/full">“Mixed Integer
+Programming”</a>
+abbreviated as <code class="docutils literal notranslate"><span class="pre">MILP</span></code>. The utility functions for linear programming
+is available under <a class="reference external" href="./linprog.py">linprog.py</a> and the non-linear
+programming defination is currently in development.</p>
+<p class="rubric" id="getting-started">Getting Started</p>
+<p>The code is publicly available at
+<code class="docutils literal notranslate"><span class="pre">`optim</span></code> &lt;<a class="reference external" href="https://gist.github.com/ZenithClown/277ddc84fa10239b4a24a366813761a5">https://gist.github.com/ZenithClown/277ddc84fa10239b4a24a366813761a5</a>&gt;`__
+by <a class="reference external" href="https://github.com/ZenithClown">ZenithClown</a>. The module
+requires external libraries
+<code class="docutils literal notranslate"><span class="pre">`pulp</span></code> &lt;<a class="reference external" href="https://coin-or.github.io/pulp/">https://coin-or.github.io/pulp/</a>&gt;`__ and
+<code class="docutils literal notranslate"><span class="pre">`scipy</span></code> &lt;<a class="reference external" href="https://scipy.org/">https://scipy.org/</a>&gt;`__, to initialize:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># install pip libraries:</span>
+pip install pulp <span class="c1"># linear programming using pulp</span>
+pip install scipy <span class="c1"># scientific computing library</span>
+
+<span class="c1"># clone the code like:</span>
+git clone https://gist.github.com/ZenithClown/277ddc84fa10239b4a24a366813761a5.git optim
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span><span class="s2">:optim&quot;</span>
+</pre></div>
+</div>
+<p class="rubric" id="linear-programming">Linear Programming</p>
+<p>Currently, a objective function is defined for <code class="docutils literal notranslate"><span class="pre">PuLP</span></code>, that aims to
+simplify large variables problem defination using a combination of
+<code class="docutils literal notranslate"><span class="pre">scipy.optimize.linprog</span></code> and <code class="docutils literal notranslate"><span class="pre">pulp</span></code> module approach. TODO:
+Documentation!!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulp</span> <span class="k">as</span> <span class="nn">p</span>
+<span class="kn">import</span> <span class="nn">linprog</span> <span class="k">as</span> <span class="nn">lp</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># no. of variables</span>
+
+<span class="n">defination</span> <span class="o">=</span> <span class="n">lp</span><span class="o">.</span><span class="n">LpObject</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cost</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="n">sense</span> <span class="o">=</span> <span class="s2">&quot;minimize&quot;</span><span class="p">,</span> <span class="n">var_lb</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">defination</span><span class="p">))</span> <span class="c1"># development representation</span>
+<span class="o">&gt;&gt;</span> <span class="n">LP</span><span class="p">(</span><span class="mi">2402254029488</span><span class="p">,</span> <span class="n">lp</span><span class="o">-</span><span class="n">problem</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="nb">vars</span> <span class="o">=</span> <span class="n">dict_keys</span><span class="p">([</span><span class="s1">&#39;X1&#39;</span><span class="p">,</span> <span class="s1">&#39;X2&#39;</span><span class="p">,</span> <span class="s1">&#39;X3&#39;</span><span class="p">])</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Defined Objective Function: </span><span class="si">{</span><span class="n">defination</span><span class="o">.</span><span class="n">problem</span><span class="o">.</span><span class="n">objective</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">Defined</span> <span class="n">Objective</span> <span class="n">Function</span><span class="p">:</span> <span class="mi">10</span><span class="o">*</span><span class="n">X1</span> <span class="o">+</span> <span class="mi">15</span><span class="o">*</span><span class="n">X2</span> <span class="o">+</span> <span class="mi">25</span><span class="o">*</span><span class="n">X3</span>
+
+<span class="c1"># add constraints</span>
+<span class="n">defination</span><span class="o">.</span><span class="n">problem</span> <span class="o">+=</span> <span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X1&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X2&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X3&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1_000</span>
+<span class="n">defination</span><span class="o">.</span><span class="n">problem</span> <span class="o">+=</span> <span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X1&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X2&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+<span class="n">defination</span><span class="o">.</span><span class="n">problem</span> <span class="o">+=</span> <span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X3&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">340</span>
+
+<span class="n">status</span> <span class="o">=</span> <span class="n">defination</span><span class="o">.</span><span class="n">problem</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">status</span><span class="p">])</span>
+<span class="o">&gt;&gt;</span> <span class="n">Optimal</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X1 =&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X1&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X2 =&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X2&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X3 =&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">defination</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s2">&quot;X3&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Objective = &quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">defination</span><span class="o">.</span><span class="n">problem</span><span class="o">.</span><span class="n">objective</span><span class="p">))</span>
+<span class="o">&gt;&gt;</span> <span class="n">X1</span> <span class="o">=</span> <span class="mf">660.0</span>
+<span class="o">&gt;&gt;</span> <span class="n">X2</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="o">&gt;&gt;</span> <span class="n">X3</span> <span class="o">=</span> <span class="mf">340.0</span>
+<span class="o">&gt;&gt;</span> <span class="n">Objective</span> <span class="o">=</span>  <span class="mf">15100.0</span>
+</pre></div>
+</div>
 </div>
 </section>
 
