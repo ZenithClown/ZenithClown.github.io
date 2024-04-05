@@ -1,181 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <title>Contacts</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/floating.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/floating.css">
-  <link rel="stylesheet" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/style.css">
+    <!-- boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  </head>
 
-
-  <!-- boxicons -->
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
-</head>
-
-<body>
-  <!-- >>> begin sidebar <<<  -->
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bx-code-alt icon'></i>
-      <div class="logo_name kanit-font">dP's Website</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-
-    <ul class="nav-list">
-      <li>
-        <a href="home.html">
-          <i class='bx bx-home-alt'></i>
-          <span class="links_name">Home</span>
-        </a>
-        <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="timeline.html">
-          <i class='bx bxs-institution'></i>
-          <span class="links_name">Education & Work</span>
-        </a>
-        <span class="tooltip">Education & Work</span>
-      </li>
-      <!-- <li>
-        <a href="projects.html">
-          <i class='bx bxs-spreadsheet'></i>
-          <span class="links_name">Projects</span>
-        </a>
-        <span class="tooltip">Projects</span>
-      </li>
-      <li>
-        <a href="photography.html">
-          <i class='bx bxs-image'></i>
-          <span class="links_name">Photography</span>
-        </a>
-        <span class="tooltip">Photography</span>
-      </li> -->
-
-      <li>
-        <a href="bookshelf.html">
-          <i class='bx bxs-book-bookmark'></i>
-          <span class="links_name">My Bookshelf</span>
-        </a>
-        <span class="tooltip">My Bookshelf</span>
-      </li>
-
-      <li>
-        <a href="code/modules/docs/_build/html/index.html" target="_blank">
-          <i class='bx bx-code-alt' ></i>
-          <span class="links_name">Code Documentations</span>
-        </a>
-        <span class="tooltip">Open Source Code Documentations</span>
-      </li>
-
-      <li>
-        <a href="contacts.html">
-          <i class='bx bxs-envelope'></i>
-          <span class="links_name">Contact Information</span>
-        </a>
-        <span class="tooltip">Connect with Me</span>
-      </li>
-
-      <!-- end section of sidebar -->
-      <li class="profile">
-        <div class="profile-details">
-          <img src="assets/images/face.jpg" alt="profileImg">
-          <div class="name_job">
-            <div class="name kanit-font"><b>Debmalya Pramanik</b></div>
-            <div class="job">Data Science & Analyst</div>
-          </div>
-        </div>
-        <i class='bx bx-info-circle' id="info"></i>
-      </li>
-    </ul>
-  </div>
-  <!-- >>> end sidebar <<<  -->
-
-  <main class="main-content-section">
-    <section class="content-container">
-      <h1 class="subtitle">Connect with Me</h1>
-      <p class="subtitle-text">
-        Curious about <i>technology</i>, <i>mathematics</i> and <i>data science</i>!
-      </p>
-      <div class="about-content contactform-content">
-        <div class="col">
-          <img src="assets/images/contact.gif" alt="" class="img-fluid" />
-        </div>
-        <div class="col">
-          <iframe class="contact-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdIrm2DMWojiaBB3Ba4XNUOoRSJGkBU4rl49w79syRBJoUpcg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-        </div>
+  <body>
+    <!-- >>> begin sidebar <<<  -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-code-alt icon"></i>
+        <div class="logo_name kanit-font">dP's Website</div>
+        <i class="bx bx-menu" id="btn"></i>
       </div>
-    </section>
-    <section class="contact-section">
-      <div class="content-container">
-        <div class="app-info support-box">
-          <div class="col">
-            <h2 class="subtitle">
-              Do you have any questions ?
-            </h2>
-            <p class="subtitle-text">
-              Let's Connect!
-            </p>
-            <div class="contact-details">
-              <a href="" class="btn btn-default">
-                <span class="position-relative"> Contact Me </span>
-              </a>
-              <div>
-                <a class="alink" href="tel:+917980092850">
-                  (+91) 79800 92850
-                </a>
-                <span>|</span>
-                <a class="alink" href="mailto:dPramanik.official@gmail.com">
-                  dPramanik.official@gmail.com
-                </a>
-              </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="home.html">
+            <i class="bx bx-home-alt"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+        <li>
+          <a href="timeline.html">
+            <i class="bx bxs-institution"></i>
+            <span class="links_name">Education & Work</span>
+          </a>
+          <span class="tooltip">Education & Work</span>
+        </li>
+
+        <li>
+          <a href="bookshelf.html">
+            <i class="bx bxs-book-bookmark"></i>
+            <span class="links_name">My Bookshelf</span>
+          </a>
+          <span class="tooltip">My Bookshelf</span>
+        </li>
+
+        <li>
+          <a href="code/modules/docs/_build/html/index.html" target="_blank">
+            <i class="bx bx-code-alt"></i>
+            <span class="links_name">Code Documentations</span>
+          </a>
+          <span class="tooltip">Open Source Code Documentations</span>
+        </li>
+
+        <li>
+          <a href="contacts.html">
+            <i class="bx bxs-envelope"></i>
+            <span class="links_name">Contact Information</span>
+          </a>
+          <span class="tooltip">Connect with Me</span>
+        </li>
+
+        <!-- end section of sidebar -->
+        <li class="profile">
+          <div class="profile-details">
+            <img src="assets/images/face.jpg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name kanit-font"><b>Debmalya Pramanik</b></div>
+              <div class="job">Data Science & Analyst</div>
             </div>
           </div>
-          <img src="assets/images/animated-contact.gif" alt="" class="info-img">
+          <i class="bx bx-info-circle" id="info"></i>
+        </li>
+      </ul>
+    </div>
+    <!-- >>> end sidebar <<<  -->
+
+    <main class="main-content-section">
+      <section class="content-container">
+        <h1 class="subtitle">Connect with Me</h1>
+        <p class="subtitle-text">Curious about <i>technology</i>, <i>mathematics</i> and <i>data science</i>!</p>
+        <div class="about-content contactform-content">
+          <div class="col">
+            <img src="assets/images/contact.gif" alt="" class="img-fluid" />
+          </div>
+          <div class="col">
+            <iframe
+              class="contact-frame"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdIrm2DMWojiaBB3Ba4XNUOoRSJGkBU4rl49w79syRBJoUpcg/viewform?embedded=true"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="content-container">
+          <div class="app-info support-box">
+            <div class="col">
+              <h2 class="subtitle">Do you have any questions ?</h2>
+              <p class="subtitle-text">Let's Connect!</p>
+              <div class="contact-details">
+                <a href="" class="btn btn-default">
+                  <span class="position-relative"> Contact Me </span>
+                </a>
+                <div>
+                  <a class="alink" href="tel:+917980092850"> (+91) 79800 92850 </a>
+                  <span>|</span>
+                  <a class="alink" href="mailto:dPramanik.official@gmail.com"> dPramanik.official@gmail.com </a>
+                </div>
+              </div>
+            </div>
+            <img src="assets/images/animated-contact.gif" alt="" class="info-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- >>> begin floating action button -->
+      <div class="floating-container">
+        <div class="floating-button">+</div>
+        <div class="element-container">
+          <a class="float-element nohover" href="tel:+917980092850"><i class="bx bxs-phone-call"></i></a>
+          <a class="float-element nohover" href="mailto:debmalyapramanik.005@gmail.com"><i class="bx bx-mail-send"></i></a>
+          <a class="float-element nohover" href="https://web.whatsapp.com/send?phone=917980092850"><i class="bx bxl-whatsapp"></i></a>
+          <a class="float-element nohover" href="https://github.com/ZenithClown/minimalist-resume/blob/master/main.pdf" target="_blank"
+            ><i class="bx bxs-file-doc"></i
+          ></a>
         </div>
       </div>
-    </section>
+      <!-- >>> end floating action button -->
+    </main>
+    <!-- load all script files -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".accordion-list > li > .answer").hide();
 
-    <!-- >>> begin floating action button -->
-    <div class="floating-container">
-      <div class="floating-button">+</div>
-      <div class="element-container">
-        <a class="float-element nohover" href="tel:+917980092850"><i class='bx bxs-phone-call'></i></a>
-        <a class="float-element nohover" href="mailto:debmalyapramanik.005@gmail.com"><i class='bx bx-mail-send'></i></a>
-        <a class="float-element nohover" href="https://web.whatsapp.com/send?phone=917980092850"><i class='bx bxl-whatsapp'></i></a>
-        <a class="float-element nohover" href="https://github.com/ZenithClown/minimalist-resume/blob/master/main.pdf" target="_blank"><i class='bx bxs-file-doc'></i></a>
-      </div>
-    </div>
-    <!-- >>> end floating action button -->
-  
-  </main>
-  <!-- load all script files -->
-  <script src="js/sidebar.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script>
-
-    $(document).ready(function () {
-      $('.accordion-list > li > .answer').hide();
-
-      $('.accordion-list > li').click(function () {
-        if ($(this).hasClass("active")) {
-          $(this).removeClass("active").find(".answer").slideUp();
-        } else {
-          $(".accordion-list > li.active .answer").slideUp();
-          $(".accordion-list > li.active").removeClass("active");
-          $(this).addClass("active").find(".answer").slideDown();
-        }
-        return false;
+        $(".accordion-list > li").click(function () {
+          if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+          } else {
+            $(".accordion-list > li.active .answer").slideUp();
+            $(".accordion-list > li.active").removeClass("active");
+            $(this).addClass("active").find(".answer").slideDown();
+          }
+          return false;
+        });
       });
-
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

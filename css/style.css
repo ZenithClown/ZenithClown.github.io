@@ -46,6 +46,19 @@
   vertical-align: middle;
 }
 
+.footer {
+  /* Footer Element for bookshelf.html Page */
+  position: fixed;
+  background-color: lightgray;
+  bottom: 0;
+  width: 100%;
+}
+
+.overflow-x {
+  /* Prevent Horizontal Scroll Bar in bookshelf.html Page */
+  overflow-x: hidden;
+}
+
 /* prevent sup and sub to affect line height */
 /* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
 sup, sub {

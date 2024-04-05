@@ -1,226 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- seo contents, to modify -->
+    <meta name="author" content="Debmalya Pramanik" />
+    <meta name="description" content="Data Science and Analyst with a passion for Research and Open Source Development" />
+    <meta
+      name="keywords"
+      content="portfolio, python, machine learning, deep learning, data science, data analyst, data engineer, mlops, open source, academic research"
+    />
+    <meta name="robots" content="INDEX, FOLLOW" />
 
-  <!-- seo contents, to modify -->
-  <meta name="author" content="Debmalya Pramanik">
-  <meta name="description" content="Data Science and Analyst with a passion for Research and Open Source Development">
-  <meta name="keywords"
-    content="portfolio, python, machine learning, deep learning, data science, data analyst, data engineer, mlops, open source, academic research">
-  <meta name="robots" content="INDEX, FOLLOW">
+    <!-- adding google site verification for indexing -->
+    <meta name="google-site-verification" content="ZeaUYtgWMDFeVFqyu7bg1NPTsBfWaIog9DnOkWACF9w" />
 
-  <!-- adding google site verification for indexing -->
-  <meta name="google-site-verification" content="ZeaUYtgWMDFeVFqyu7bg1NPTsBfWaIog9DnOkWACF9w" />
+    <!-- normalize all browser -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 
-  <!-- normalize all browser -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 
-  <!-- boxicons -->
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- add style sheets -->
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/floating.css" />
+    <link rel="stylesheet" href="css/timeline-style.css" />
 
-  <!-- add style sheets -->
-  <link rel="stylesheet" href="css/sidebar.css">
-  <link rel="stylesheet" href="css/floating.css">
-  <link rel="stylesheet" href="css/timeline-style.css">
+    <title>Education & Work</title>
+  </head>
 
-  <title>Education & Work</title>
-</head>
-
-<body>
-  <!-- >>> begin sidebar <<<  -->
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bx-code-alt icon'></i>
-      <div class="logo_name kanit-font">dP's Website</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-
-    <ul class="nav-list">
-      <li>
-        <a href="home.html">
-          <i class='bx bx-home-alt'></i>
-          <span class="links_name">Home</span>
-        </a>
-        <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="timeline.html">
-          <i class='bx bxs-institution'></i>
-          <span class="links_name">Education & Work</span>
-        </a>
-        <span class="tooltip">Education & Work</span>
-      </li>
-      <!-- <li>
-        <a href="projects.html">
-          <i class='bx bxs-spreadsheet'></i>
-          <span class="links_name">Projects</span>
-        </a>
-        <span class="tooltip">Projects</span>
-      </li>
-      <li>
-        <a href="photography.html">
-          <i class='bx bxs-image'></i>
-          <span class="links_name">Photography</span>
-        </a>
-        <span class="tooltip">Photography</span>
-      </li> -->
-
-      <li>
-        <a href="bookshelf.html">
-          <i class='bx bxs-book-bookmark'></i>
-          <span class="links_name">My Bookshelf</span>
-        </a>
-        <span class="tooltip">My Bookshelf</span>
-      </li>
-
-      <li>
-        <a href="code/modules/docs/_build/html/index.html" target="_blank">
-          <i class='bx bx-code-alt' ></i>
-          <span class="links_name">Code Documentations</span>
-        </a>
-        <span class="tooltip">Open Source Code Documentations</span>
-      </li>
-
-      <li>
-        <a href="contacts.html">
-          <i class='bx bxs-envelope'></i>
-          <span class="links_name">Contact Information</span>
-        </a>
-        <span class="tooltip">Connect with Me</span>
-      </li>
-
-      <!-- end section of sidebar -->
-      <li class="profile">
-        <div class="profile-details">
-          <img src="assets/images/face.jpg" alt="profileImg">
-          <div class="name_job">
-            <div class="name kanit-font"><b>Debmalya Pramanik</b></div>
-            <div class="job">Data Science & Analyst</div>
-          </div>
-        </div>
-        <i class='bx bx-info-circle' id="info"></i>
-      </li>
-    </ul>
-  </div>
-  <!-- >>> end sidebar <<<  -->
-
-  <main class="main-content-section timeline-padding-0">
-    <!-- partial:index.partial.html -->
-    <div class="timeline-container" id="timeline-1">
-      <div class="timeline-header">
-        <h2 class="timeline-header__title"><i>Major Events Timeline</i></h2>
-        <h3 class="timeline-header__subtitle">Education & Work Experience</h3>
+  <body>
+    <!-- >>> begin sidebar <<<  -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-code-alt icon"></i>
+        <div class="logo_name kanit-font">dP's Website</div>
+        <i class="bx bx-menu" id="btn"></i>
       </div>
 
-      <div class="timeline">
+      <ul class="nav-list">
+        <li>
+          <a href="home.html">
+            <i class="bx bx-home-alt"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
 
-        <div class="timeline-item" data-text="[WORK]: Pidilite Industries Ltd.">
-          <div class="timeline__content"><img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=1" />
-            <h2 class="timeline__content-title">June, 2023 - <i>present</i></h2>
-            <p class="timeline__content-desc"><p align="justify">
-              👨‍💼 <b><i>Manager</i> - Data Scientist</b> <br><br>
-              🎯 Andheri (E), Mumbai, Maharashtra <br><br>
-              ✨ <b>Project Management</b>: Driving in-house digital projects to enhance supply chain experience with
-              forward forecast based on norms, market outlook, and commodity price forecast. <br>
-              ✨ <b>Analytics Strategy</b>: Cost, route and share of business optimization. <br>
-              ✨ <b>Vendor Management</b>: Identify, evaluate and cost negotiations with vendors for monitoring SLAs and management
-              of on-/off-site vendor resources.
-              <p></p> <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+        <li>
+          <a href="timeline.html">
+            <i class="bx bxs-institution"></i>
+            <span class="links_name">Education & Work</span>
+          </a>
+          <span class="tooltip">Education & Work</span>
+        </li>
+
+        <li>
+          <a href="bookshelf.html">
+            <i class="bx bxs-book-bookmark"></i>
+            <span class="links_name">My Bookshelf</span>
+          </a>
+          <span class="tooltip">My Bookshelf</span>
+        </li>
+
+        <li>
+          <a href="code/modules/docs/_build/html/index.html" target="_blank">
+            <i class="bx bx-code-alt"></i>
+            <span class="links_name">Code Documentations</span>
+          </a>
+          <span class="tooltip">Open Source Code Documentations</span>
+        </li>
+
+        <li>
+          <a href="contacts.html">
+            <i class="bx bxs-envelope"></i>
+            <span class="links_name">Contact Information</span>
+          </a>
+          <span class="tooltip">Connect with Me</span>
+        </li>
+
+        <!-- end section of sidebar -->
+        <li class="profile">
+          <div class="profile-details">
+            <img src="assets/images/face.jpg" alt="profileImg" />
+            <div class="name_job">
+              <div class="name kanit-font"><b>Debmalya Pramanik</b></div>
+              <div class="job">Data Science & Analyst</div>
+            </div>
           </div>
+          <i class="bx bx-info-circle" id="info"></i>
+        </li>
+      </ul>
+    </div>
+    <!-- >>> end sidebar <<<  -->
+
+    <main class="main-content-section timeline-padding-0">
+      <!-- partial:index.partial.html -->
+      <div class="timeline-container" id="timeline-1">
+        <div class="timeline-header">
+          <h2 class="timeline-header__title"><i>Major Events Timeline</i></h2>
+          <h3 class="timeline-header__subtitle">Education & Work Experience</h3>
         </div>
 
-        <div class="timeline-item" data-text="[WORK]: Reliance Jio Infocomm Ltd.">
-          <div class="timeline__content"><img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=2" />
-            <h2 class="timeline__content-title">April, 2020 - May, 2021</h2>
-            <p class="timeline__content-desc"><p align="justify">
-              👨‍💼 <b><i>Manager</i> - Data Analyst</b> <br><br>
-              🎯 Navi Mumbai, Maharashtra <br><br>
-              ✨ <b>Analytics & Project Management</b>: Driving in-house analytics solutions for automations, stakeholders
-              review reports on network performance and predivtive mantenance. <br>
-              ✨ <b>Custome Experience</b>: Enhance customer's experience by coverage analysis and prevention using path-loss models.
-              <p></p> <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+        <div class="timeline">
+          <div class="timeline-item" data-text="[WORK]: Pidilite Industries Ltd.">
+            <div class="timeline__content">
+              <img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=1" />
+              <h2 class="timeline__content-title">June, 2023 - <i>present</i></h2>
+              <p class="timeline__content-desc"></p>
+              <p align="justify">
+                👨‍💼 <b><i>Manager</i> - Data Scientist</b> <br /><br />
+                🎯 Andheri (E), Mumbai, Maharashtra <br /><br />
+                ✨ <b>Project Management</b>: Driving in-house digital projects to enhance supply chain experience with forward forecast based on norms, market
+                outlook, and commodity price forecast. <br />
+                ✨ <b>Analytics Strategy</b>: Cost, route and share of business optimization. <br />
+                ✨ <b>Vendor Management</b>: Identify, evaluate and cost negotiations with vendors for monitoring SLAs and management of on-/off-site vendor
+                resources.
+              </p>
+
+              <p></p>
+              <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+            </div>
           </div>
-        </div>
 
-        <div class="timeline-item" data-text="[WORK]: Reliance Jio Infocomm Ltd.">
-          <div class="timeline__content"><img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=3" />
-            <h2 class="timeline__content-title">April, 2020 - May, 2021</h2>
-            <p class="timeline__content-desc"><p align="justify">
-              👨‍💼 <b><i>Deputy Manager</i> - Data Analyst</b> <br><br>
-              🎯 Navi Mumbai, Maharashtra <br><br>
-              ✨ Netowrk optimizations, ODSC planning and deployment with state-of-the-art in-house developed algorithms,
-              mathematical modeling of power amplifier. <br>
-              ✨ Developed an open-source python library ("jioGIS") to provide fast and efficient GIS solutions like
-              network proximity analysis and nearest neighbor detection.
-              <p></p> <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+          <div class="timeline-item" data-text="[WORK]: Reliance Jio Infocomm Ltd.">
+            <div class="timeline__content">
+              <img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=2" />
+              <h2 class="timeline__content-title">April, 2020 - May, 2021</h2>
+              <p class="timeline__content-desc"></p>
+              <p align="justify">
+                👨‍💼 <b><i>Manager</i> - Data Analyst</b> <br /><br />
+                🎯 Navi Mumbai, Maharashtra <br /><br />
+                ✨ <b>Analytics & Project Management</b>: Driving in-house analytics solutions for automations, stakeholders review reports on network
+                performance and predivtive mantenance. <br />
+                ✨ <b>Custome Experience</b>: Enhance customer's experience by coverage analysis and prevention using path-loss models.
+              </p>
+
+              <p></p>
+              <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+            </div>
           </div>
-        </div>
 
-        <div class="timeline-item" data-text="Indian Institute of Technology IIT-ISM Dhanbad">
-          <div class="timeline__content"><img class="timeline__img" src="https://source.unsplash.com/random/350x100?query-cars&sig=4" />
-            <h2 class="timeline__content-title">August, 2018 - June, 2021</h2>
-            <p class="timeline__content-desc"><p align="justify">
-              👨‍🎓 <b>MAJOR:</b> Power Electronics and Electrical Drives (PPED) <br>
-              👨‍🎓 <b>MINOR:</b> Soft Computing & Machine Learning Applications <br><br>
-              📃 3 Years (Part-Time) M. Tech in PEED <br>
-              (sponsored for internal projects, WLP classroom based) <br><br>
-              Power electronics and soft-computing is the backbone of current automated and connected world. The tech-stacks are
-              efficient and robust due to advancement in high-switching and efficient condition based monitoring.
-              <p></p> <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+          <div class="timeline-item" data-text="[WORK]: Reliance Jio Infocomm Ltd.">
+            <div class="timeline__content">
+              <img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=3" />
+              <h2 class="timeline__content-title">April, 2020 - May, 2021</h2>
+              <p class="timeline__content-desc"></p>
+              <p align="justify">
+                👨‍💼 <b><i>Deputy Manager</i> - Data Analyst</b> <br /><br />
+                🎯 Navi Mumbai, Maharashtra <br /><br />
+                ✨ Netowrk optimizations, ODSC planning and deployment with state-of-the-art in-house developed algorithms, mathematical modeling of power
+                amplifier. <br />
+                ✨ Developed an open-source python library ("jioGIS") to provide fast and efficient GIS solutions like network proximity analysis and nearest
+                neighbor detection.
+              </p>
+
+              <p></p>
+              <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+            </div>
           </div>
-        </div>
 
-        <div class="timeline-item" data-text="[WORK]: Reliance Jio Infocomm Ltd.">
-          <div class="timeline__content"><img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=5" />
-            <h2 class="timeline__content-title">Oct, 2016 - April, 2020</h2>
-            <p class="timeline__content-desc"><p align="justify">
-              👨‍💼 <b><i>Assistant Manager</i> - Data Analyst</b> <br><br>
-              🎯 Kolkata, West Bengal <br><br>
-              Fresh out of college, joined the Data Science & Analytics team of Reliance Jio on 18th October, 2016 - to
-              learn about business priniciples and driving analytics strategies for customer acquisitions.
-              <p></p> <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+          <div class="timeline-item" data-text="Indian Institute of Technology IIT-ISM Dhanbad">
+            <div class="timeline__content">
+              <img class="timeline__img" src="https://source.unsplash.com/random/350x100?query-cars&sig=4" />
+              <h2 class="timeline__content-title">August, 2018 - June, 2021</h2>
+              <p class="timeline__content-desc"></p>
+              <p align="justify">
+                👨‍🎓 <b>MAJOR:</b> Power Electronics and Electrical Drives (PPED) <br />
+                👨‍🎓 <b>MINOR:</b> Soft Computing & Machine Learning Applications <br /><br />
+                📃 3 Years (Part-Time) M. Tech in PEED <br />
+                (sponsored for internal projects, WLP classroom based) <br /><br />
+                Power electronics and soft-computing is the backbone of current automated and connected world. The tech-stacks are efficient and robust due to
+                advancement in high-switching and efficient condition based monitoring.
+              </p>
+
+              <p></p>
+              <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+            </div>
           </div>
-        </div>
 
-        <div class="timeline-item" data-text="Neotia Institute of Technology Management & Science (NITMAS)">
-          <div class="timeline__content"><img class="timeline__img" src="https://source.unsplash.com/random/350x100?query-cars&sig=6" />
-            <h2 class="timeline__content-title">April, 2020 - May, 2021</h2>
-            <p class="timeline__content-desc"><p align="justify">
-              👨‍🎓 Electrical & Electronics Engineering <br><br>
-              📃 B. Tech in EEE, MAKAUT (formerly WBUT) <br><br>
-              Primary graduation from Neotia Institute of Technology Management and Science (NITMAS) under Maulana Abul Kalam Azad
-              University of Technology (MAKAUT, foremerly West Bengal University of Technology - WBUT). <br>
-              <p></p> <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+          <div class="timeline-item" data-text="[WORK]: Reliance Jio Infocomm Ltd.">
+            <div class="timeline__content">
+              <img class="timeline__img" src="https://source.unsplash.com/random/350x100?query=pattern&sig=5" />
+              <h2 class="timeline__content-title">Oct, 2016 - April, 2020</h2>
+              <p class="timeline__content-desc"></p>
+              <p align="justify">
+                👨‍💼 <b><i>Assistant Manager</i> - Data Analyst</b> <br /><br />
+                🎯 Kolkata, West Bengal <br /><br />
+                Fresh out of college, joined the Data Science & Analytics team of Reliance Jio on 18th October, 2016 - to learn about business priniciples and
+                driving analytics strategies for customer acquisitions.
+              </p>
+
+              <p></p>
+              <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+            </div>
           </div>
+
+          <div class="timeline-item" data-text="Neotia Institute of Technology Management & Science (NITMAS)">
+            <div class="timeline__content">
+              <img class="timeline__img" src="https://source.unsplash.com/random/350x100?query-cars&sig=6" />
+              <h2 class="timeline__content-title">April, 2020 - May, 2021</h2>
+              <p class="timeline__content-desc"></p>
+              <p align="justify">
+                👨‍🎓 Electrical & Electronics Engineering <br /><br />
+                📃 B. Tech in EEE, MAKAUT (formerly WBUT) <br /><br />
+                Primary graduation from Neotia Institute of Technology Management and Science (NITMAS) under Maulana Abul Kalam Azad University of Technology
+                (MAKAUT, foremerly West Bengal University of Technology - WBUT). <br />
+              </p>
+
+              <p></p>
+              <!-- !!! Keep this for Scrolling Issue in High-Res Screen !!!  -->
+            </div>
+          </div>
+
+          <div class="timeline-item"><p></p></div>
         </div>
-
-        <div class="timeline-item"><p></p></div>
-
       </div>
-    </div>
-    <!-- partial -->
+      <!-- partial -->
 
-  <!-- >>> begin floating action button -->
-  <div class="floating-container">
-    <div class="floating-button">+</div>
-    <div class="element-container">
-      <a class="float-element nohover" href="tel:+917980092850"><i class='bx bxs-phone-call'></i></a>
-      <a class="float-element nohover" href="mailto:debmalyapramanik.005@gmail.com"><i class='bx bx-mail-send'></i></a>
-      <a class="float-element nohover" href="https://web.whatsapp.com/send?phone=917980092850"><i class='bx bxl-whatsapp'></i></a>
-      <a class="float-element nohover" href="https://github.com/ZenithClown/minimalist-resume/blob/master/main.pdf" target="_blank"><i class='bx bxs-file-doc'></i></a>
-    </div>
-  </div>
-  <!-- >>> end floating action button -->
+      <!-- >>> begin floating action button -->
+      <div class="floating-container">
+        <div class="floating-button">+</div>
+        <div class="element-container">
+          <a class="float-element nohover" href="tel:+917980092850"><i class="bx bxs-phone-call"></i></a>
+          <a class="float-element nohover" href="mailto:debmalyapramanik.005@gmail.com"><i class="bx bx-mail-send"></i></a>
+          <a class="float-element nohover" href="https://web.whatsapp.com/send?phone=917980092850"><i class="bx bxl-whatsapp"></i></a>
+          <a class="float-element nohover" href="https://github.com/ZenithClown/minimalist-resume/blob/master/main.pdf" target="_blank"
+            ><i class="bx bxs-file-doc"></i
+          ></a>
+        </div>
+      </div>
+      <!-- >>> end floating action button -->
+    </main>
 
-  </main>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script src="./js/timeline.js"></script>
-  <script src="./js/sidebar.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./js/timeline.js"></script>
+    <script src="./js/sidebar.js"></script>
+  </body>
 </html>
