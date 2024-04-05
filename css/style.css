@@ -1,8 +1,103 @@
+:root {
+  /* Primary Color Choice :: `pr` - Primary, `bg` - Background */
+  --pr-color: #e4e9f7;
+  --bg-color: #fff;
+
+  /* Landing Page Color Choices :: Typically for `index.html` Page */
+  --landing-bg-color: rgba(90, 139, 123, 0.4);
+
+  /* Sidebar Color Choices :: Dark/Light Color Scheme */
+  --sidebar-dark: #11101d;
+  --sidebar-light: #fff;
+  --sidebar-box-shadow: rgba(0, 0, 0, 0.3);
+  --sidebar-profile-bg: #1d1b31;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+/* !!! Setting(s) for Primary HTML Tag(s) :: Responsive Design !!! */
+@media (max-width: 1920px) {
+  main {
+    padding-left: 0px;
+    padding-top: 28px;
+  }
+
+  .container {
+    margin: auto;
+  }
+
+  h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+
+  h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+
+  h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+
+  h4 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
+
+  h5 {
+    font-size: calc(1.25rem + 0.3vw);
+  }
+
+  h6 {
+    font-size: calc(1.15rem + 0.3vw);
+  }
+
+  .big-font-1 {
+    font-size: calc(1.725rem + 5vw);
+  }
+
+  .big-font-2 {
+    font-size: calc(1.625rem + 4.5vw);
+  }
+
+  .big-font-3 {
+    font-size: calc(1.525rem + 3.5vw);
+  }
+
+  .big-font-4 {
+    font-size: calc(1.425rem + 1.5vw);
+  }
+
+  .big-font-5 {
+    font-size: calc(1rem + 1vw);
+  }
+
+  .big-font-5-center {
+    text-align: center;
+    font-size: calc(1rem + 1vw);
+  }
+
+  .big-font-6-center {
+    text-align: center;
+    font-size: calc(0.7rem + 0.7vw);
+  }
+
+  .small-font {
+    font-size: calc(0.6rem + 0.6vw);
+  }
+
+  .reference {
+    font-size: xx-small;
+    color: rgb(255, 255, 255);
+  }
 }
 
 /* set style on specific tags */
@@ -61,95 +156,15 @@
 
 /* prevent sup and sub to affect line height */
 /* https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
-sup, sub {
+sup,
+sub {
   vertical-align: baseline;
   position: relative;
   top: -1.25em;
 }
 
-sub { 
-  top: 0.4em; 
-}
-
-/* media elements for size and proportion */
-@media (max-width: 2000px) {
-  main {
-    padding-left: 0px;
-    padding-top: 28px;
-  }
-
-  .container {
-    margin: auto;
-  }
-
-  /* 
-    ! settings for main elements
-  */
-
-  #intro {
-    background: url("assets/images/background.png");
-  }
-
-  /* set responsive font sizes */
-  /* https://css-tricks.com/a-complete-guide-to-calc-in-css/ */
-  h1, .h1 {
-    font-size: calc(1.375rem + 1.5vw);
-  }
-
-  h2, .h2 {
-    font-size: calc(1.325rem + 0.9vw);
-  }
-
-  h3, .h3 {
-    font-size: calc(1.3rem + 0.6vw);
-  }
-
-  h4, .h4 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
-
-  h5, .h5 {
-    font-size: calc(1.25rem + 0.3vw);
-  }
-
-  .big-font-1 {
-    font-size: calc(1.725rem + 5vw);
-  }
-
-  .big-font-2 {
-    font-size: calc(1.625rem + 4.5vw);
-  }
-
-  .big-font-3 {
-    font-size: calc(1.525rem + 3.5vw);
-  }
-
-  .big-font-4 {
-    font-size: calc(1.425rem + 1.5vw);
-  }
-
-  .big-font-5 {
-    font-size: calc(1rem + 1vw);
-  }
-
-  .big-font-5-center {
-    text-align: center;
-    font-size: calc(1rem + 1vw);
-  }
-
-  .big-font-6-center {
-    text-align: center;
-    font-size: calc(0.7rem + 0.7vw);
-  }
-
-  .small-font {
-    font-size: calc(0.6rem + 0.6vw);
-  }
-
-  .reference {
-    font-size: xx-small;
-    color: rgb(255, 255, 255);
-  }
+sub {
+  top: 0.4em;
 }
 
 /* home css by 02-05-23 */
@@ -177,7 +192,7 @@ sub {
   margin: auto;
   animation: circle 2.5s ease-in-out infinite alternate;
 }
- 
+
 @keyframes circle {
   0% {
     transform: translateY(-8px);
@@ -188,36 +203,36 @@ sub {
 }
 
 /* home page */
-.content-container{
+.content-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 30px;
 }
-.about-content{
+.about-content {
   min-height: 100vh;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-.about-content .main-title{
+.about-content .main-title {
   font-size: 36px;
   margin: 0;
   color: #081f1c;
 }
-.about-content .main-title .name{
+.about-content .main-title .name {
   color: #239746;
 }
-.about-content .main-title .dblock{
+.about-content .main-title .dblock {
   display: block;
 }
-.about-content .post-name{
+.about-content .post-name {
   font-size: 22px;
   margin: 10px 0;
   display: flex;
 }
-.about-content .post-name::before{
-  content: '';
+.about-content .post-name::before {
+  content: "";
   margin: 14px 0;
   width: 20px;
   height: 3px;
@@ -225,20 +240,20 @@ sub {
   display: inline-block;
   margin-right: 15px;
 }
-.about-content .col{
+.about-content .col {
   flex: 0 0 50%;
   max-width: 50%;
 }
-.about-content .ab-content{
+.about-content .ab-content {
   font-size: 16px;
   line-height: 28px;
   margin: 20px 0;
 }
-.about-content .img-fluid{
+.about-content .img-fluid {
   max-width: 100%;
   mix-blend-mode: multiply;
 }
-.about-content .icon-btn{
+.about-content .icon-btn {
   height: 36px;
   width: 36px;
   display: inline-flex;
@@ -250,25 +265,25 @@ sub {
   border-radius: 10px;
   margin-right: 8px;
 }
-.about-content a.instagram{
-  background: #d62976 ;
+.about-content a.instagram {
+  background: #d62976;
 }
 .about-content a.facebook {
   background: #3b5998;
 }
-.skills-section{
+.skills-section {
   padding: 60px 0;
   background: #fff;
   margin-top: 30px;
 }
-.subtitle{
+.subtitle {
   font-size: 30px;
   margin: 0 0 30px;
   text-align: center;
   position: relative;
   color: #081f1c;
 }
-.subtitle::after{
+.subtitle::after {
   content: "";
   position: absolute;
   left: 0;
@@ -279,18 +294,18 @@ sub {
   height: 3px;
   background: #081f1c;
 }
-.subtitle-text{
+.subtitle-text {
   text-align: center;
   font-size: 16px;
   margin-bottom: 25px;
 }
 
-.skills-icons{
+.skills-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.skills-icons .icons{
+.skills-icons .icons {
   margin: 15px 7px 0;
   border: 1px solid #ededed;
   padding: 7px;
@@ -303,13 +318,13 @@ sub {
   transition: all 0.2s;
 }
 
-.skills-icons .icons:hover{
+.skills-icons .icons:hover {
   transform: translateY(-5px);
 }
-.skills-icons .icons img{
+.skills-icons .icons img {
   height: 55px;
 }
-.contact-section{
+.contact-section {
   padding: 60px 0;
 }
 .app-info {
@@ -319,10 +334,11 @@ sub {
   padding: 50px;
   border-radius: 30px;
 }
-.app-info .subtitle, .app-info .subtitle-text{
+.app-info .subtitle,
+.app-info .subtitle-text {
   text-align: left;
 }
-.app-info .subtitle::after{
+.app-info .subtitle::after {
   left: 0;
   right: auto;
   bottom: -17px;
@@ -357,7 +373,7 @@ ul.accordion-list li {
   display: block;
   width: 100%;
   height: auto;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 20px 20px 20px 30px;
   margin: 0 auto 20px auto;
   border: 1px solid #c9d7ff;
@@ -381,7 +397,7 @@ ul.accordion-list li h3 {
 }
 ul.accordion-list li h3:after {
   content: "\eb21";
-  font-family: 'boxicons'!important;
+  font-family: "boxicons" !important;
   position: absolute;
   right: 0;
   top: 0;
@@ -421,17 +437,17 @@ ul.accordion-list li .img-box {
   border: 1px solid #c9d7ff;
   overflow: hidden;
 }
-ul.accordion-list li .img-box img{
+ul.accordion-list li .img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.contact-details{
+.contact-details {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.contact-details .alink{
+.contact-details .alink {
   font-size: 14px;
   color: #11101d;
   text-decoration: none;
@@ -439,10 +455,10 @@ ul.accordion-list li .img-box img{
   display: inline-block;
   word-break: break-all;
 }
-.contact-details .alink:hover{
+.contact-details .alink:hover {
   color: #009688;
 }
-.contact-frame{
+.contact-frame {
   width: 100%;
   background: #fff;
   height: 460px;
@@ -451,11 +467,12 @@ ul.accordion-list li .img-box img{
   margin: 30px 0 0;
 }
 
-.contactform-content{
+.contactform-content {
   min-height: unset;
 }
 @media (min-width: 992px) {
-  .skills-section .subtitle, .skills-section .subtitle-text {
+  .skills-section .subtitle,
+  .skills-section .subtitle-text {
     text-align: left;
     padding: 0 15px;
   }
@@ -479,11 +496,11 @@ ul.accordion-list li .img-box img{
 }
 
 @media (max-width: 992px) {
-  .about-content{
+  .about-content {
     flex-direction: column-reverse;
     align-items: center;
   }
-  .about-content .col{
+  .about-content .col {
     flex: 1;
     max-width: 100%;
   }
@@ -496,10 +513,11 @@ ul.accordion-list li .img-box img{
     text-align: center;
     justify-content: center;
   }
-  .about-content .ab-content{
+  .about-content .ab-content {
     text-align: center;
   }
-  .about-content .ab-content + div , .about-content p{
+  .about-content .ab-content + div,
+  .about-content p {
     text-align: center;
   }
   .app-info.support-box .info-img {
@@ -509,33 +527,33 @@ ul.accordion-list li .img-box img{
   .app-info .col {
     width: 50%;
   }
-  .app-info{
+  .app-info {
     padding: 30px 40px;
   }
   .app-info .subtitle {
     font-size: 24px;
     margin: 0 0 30px;
   }
-  .contactform-content .col{
+  .contactform-content .col {
     max-width: 100%;
     flex: 0 0 100%;
     min-width: 100%;
   }
-  .contactform-content .img-fluid{
+  .contactform-content .img-fluid {
     display: none;
   }
-  .contact-frame{
+  .contact-frame {
     margin-top: 0;
   }
 }
 @media (max-width: 767px) {
   .content-container {
     padding: 0 15px;
-  } 
+  }
   .about-content {
     flex-direction: column-reverse;
   }
-  .about-content .col{
+  .about-content .col {
     flex: 1;
     max-width: 100%;
     text-align: center;
@@ -550,7 +568,8 @@ ul.accordion-list li .img-box img{
     flex-direction: column-reverse;
     align-items: center;
   }
-  .skills-section , .contact-section{
+  .skills-section,
+  .contact-section {
     padding: 35px 0;
   }
   .subtitle {
@@ -564,7 +583,8 @@ ul.accordion-list li .img-box img{
     padding: 20px 30px 30px;
     text-align: center;
   }
-  .app-info .subtitle, .app-info .subtitle-text {
+  .app-info .subtitle,
+  .app-info .subtitle-text {
     text-align: center;
   }
   .app-info .subtitle {
@@ -587,10 +607,10 @@ ul.accordion-list li .img-box img{
     right: 0;
     left: 0;
   }
-  .contact-details{
+  .contact-details {
     justify-content: center;
   }
-  .app-info a.btn-default{
+  .app-info a.btn-default {
     margin-bottom: 10px;
   }
 }
