@@ -100,6 +100,10 @@ body {
   }
 }
 
+/* p {
+  text-align: justify;
+} */
+
 /* set style on specific tags */
 .full-height {
   height: 95vh;
