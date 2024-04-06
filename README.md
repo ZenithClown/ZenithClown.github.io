@@ -1,7 +1,7 @@
 <div align = "center">
   <table style="width:100%; border-collapse: collapse; border: none;">
     <tr>
-      <th><a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "175" width = "175" src = "./favicon/logo_small.png"></a></th>
+      <th><a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "175" width = "175" src = "./assets/favicon/logo_small.png"></a></th>
       <th>
         <h1 align = "center">
           Portfolio Website <a href = "https://zenithclown.github.io/minimalist-resume/"><img height = "32" width = "32" src = "./assets/images/readme/www_logo.png"></a> <br>
