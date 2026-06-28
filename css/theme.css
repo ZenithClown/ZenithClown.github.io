@@ -1,0 +1,169 @@
+/*
+ * Slytherin Theme :: Design Tokens & Global Primitives
+ * --------------------------------------------------------------------------
+ * Single source of truth for the green-and-black colour system. Linked FIRST
+ * on every page so the tokens exist everywhere (incl. timeline & photography,
+ * which do not load style.css). Dark is the default; `data-theme="light"` on
+ * <html> flips the content palette. The sidebar rail stays dark in BOTH themes
+ * on purpose, since its colours are a contrast pair, not a theme.
+ *
+ * Pure CSS, no build step. See js/theme.js for the toggle + no-flash logic.
+ */
+
+/* ===================== THEME TOKENS ===================== */
+:root {
+  /* Slytherin DARK (default) */
+  --sly-bg: #0a0f0d;            /* page background: near-black forest        */
+  --sly-bg-elev: #0f1f1c;       /* elevated surfaces / panels                */
+  --sly-bg-card: #12231f;       /* cards, accordions                         */
+  --sly-surface: rgba(20, 40, 34, 0.55);  /* glassmorphism fill              */
+  --sly-green: #1a7a4f;         /* primary emerald                           */
+  --sly-green-bright: #2ecc8f;  /* hover / active / links                    */
+  --sly-emerald-deep: #081f1c;  /* deepest forest (landing splash)           */
+  --sly-silver: #c9d6d0;        /* silver-green accent                       */
+  --sly-text: #e6f1ec;          /* primary text                              */
+  --sly-text-muted: #9bb3aa;    /* secondary text                            */
+  --sly-border: rgba(120, 200, 170, 0.18);
+  --sly-shadow: rgba(0, 0, 0, 0.45);
+  --sly-overlay: rgba(90, 139, 123, 0.40);
+  --sly-gradient: linear-gradient(135deg, #0f1f1c 0%, #0a0f0d 60%, #081f1c 100%);
+  --sly-glow: 0 0 24px rgba(46, 204, 143, 0.25);
+
+  /* GIFs ship with white backgrounds; `multiply` drops that on light pages,
+     but hides them on dark. Keep them visible (normal) on the dark theme. */
+  --img-blend: normal;
+
+  /* Sidebar rail :: constant dark green in BOTH themes (contrast pair) */
+  --sidebar-dark: #0d1a17;
+  --sidebar-light: #e6f1ec;
+  --sidebar-box-shadow: rgba(0, 0, 0, 0.4);
+  --sidebar-profile-bg: #12231f;
+
+  /* Legacy page aliases -> theme tokens (flip with the theme) */
+  --pr-color: var(--sly-bg);
+  --bg-color: var(--sly-bg-elev);
+  --landing-bg-color: var(--sly-overlay);
+}
+
+:root[data-theme="light"] {
+  --sly-bg: #eef3f1;
+  --sly-bg-elev: #ffffff;
+  --sly-bg-card: #ffffff;
+  --sly-surface: rgba(255, 255, 255, 0.70);
+  --sly-green: #15734a;
+  --sly-green-bright: #0f9d6c;
+  --sly-emerald-deep: #081f1c;
+  --sly-silver: #5a7d72;
+  --sly-text: #0c1f1a;
+  --sly-text-muted: #46615a;
+  --sly-border: rgba(20, 60, 45, 0.15);
+  --sly-shadow: rgba(20, 40, 34, 0.12);
+  --sly-overlay: rgba(90, 139, 123, 0.30);
+  --sly-gradient: linear-gradient(135deg, #f4fafa 0%, #e9f1ee 60%, #e4e9f7 100%);
+  --sly-glow: 0 0 18px rgba(21, 115, 74, 0.18);
+  --img-blend: multiply;
+  /* sidebar vars intentionally NOT overridden -> rail stays dark green */
+}
+
+/* ===================== GLOBAL BASE ===================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--sly-bg);
+  color: var(--sly-text);
+}
+
+/* `html` prefix raises specificity so the fluid gradient wins over the flat
+   background that sidebar.css sets on the same selector (loaded afterwards). */
+html .main-content-section {
+  color: var(--sly-text);
+  background: var(--sly-gradient);
+}
+
+/* readable text-links inside content areas */
+.main-content-section p a,
+.answer a,
+.timeline__content-desc a,
+.credit a,
+.footer a {
+  color: var(--sly-green-bright);
+  text-decoration: none;
+}
+.main-content-section p a:hover,
+.answer a:hover,
+.credit a:hover,
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* smooth palette swap when toggling theme */
+body,
+.main-content-section,
+.skills-section,
+.app-info,
+ul.accordion-list li,
+.contact-frame,
+.skills-icons .icons {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* ===================== ACCESSIBILITY ===================== */
+a:focus-visible,
+button:focus-visible,
+.icon-btn:focus-visible,
+.theme-toggle:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--sly-green-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===================== THEME TOGGLE BUTTON ===================== */
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--sly-border);
+  border-radius: 50%;
+  background: var(--sly-surface);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--sly-glow);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(18deg) scale(1.08);
+}
+
+@media (max-width: 567px) {
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+    top: 12px;
+    right: 12px;
+  }
+}

@@ -17,6 +17,16 @@
     <!-- adding google site verification for indexing -->
     <meta name="google-site-verification" content="ZeaUYtgWMDFeVFqyu7bg1NPTsBfWaIog9DnOkWACF9w" />
 
+    <!-- theme: set before paint to avoid a flash of the wrong theme (default: dark) -->
+    <script>
+      (function () {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("sly-theme") || "dark");
+      })();
+    </script>
+
+    <!-- Slytherin theme tokens (must load first) -->
+    <link rel="stylesheet" href="css/theme.css" />
+
     <!-- normalize all browser -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 
@@ -32,6 +42,9 @@
   </head>
 
   <body>
+    <!-- dark/light theme toggle (defaults to dark) -->
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between dark and light theme" title="Toggle theme">🌙</button>
+
     <!-- >>> begin sidebar <<<  -->
     <div class="sidebar">
       <div class="logo-details">
@@ -49,16 +62,16 @@
           <span class="tooltip">Home</span>
         </li>
 
-        <li>
+        <!-- <li>
           <a href="timeline.html">
             <i class="bx bxs-institution"></i>
             <span class="links_name">Education & Work</span>
           </a>
           <span class="tooltip">Education & Work</span>
-        </li>
+        </li> -->
 
         <li>
-          <a href="bookshelf.html">
+          <a href="https://www.goodreads.com/user/show/195966969-debmalya-pramanik" target="_blank">
             <i class="bx bxs-book-bookmark"></i>
             <span class="links_name">My Bookshelf</span>
           </a>
@@ -66,7 +79,7 @@
         </li>
 
         <li>
-          <a href="http://ds-gringotts.readthedocs.io/" target="_blank">
+          <a href="https://ds-gringotts.readthedocs.io/" target="_blank">
             <i class="bx bx-code-alt"></i>
             <span class="links_name">Code Documentations</span>
           </a>
@@ -235,8 +248,9 @@
       <!-- >>> end floating action button -->
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="./js/timeline.js"></script>
     <script src="./js/sidebar.js"></script>
+    <script src="./js/theme.js"></script>
   </body>
 </html>

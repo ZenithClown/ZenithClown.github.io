@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Contacts</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <meta
+      name="description"
+      content="Get in touch with Debmalya Pramanik, Data Scientist and AI/ML Engineer. Questions about technology, mathematics, and data science are welcome."
+    />
+
+    <!-- theme: set before paint to avoid a flash of the wrong theme (default: dark) -->
+    <script>
+      (function () {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("sly-theme") || "dark");
+      })();
+    </script>
+
+    <!-- Slytherin theme tokens (must load first) -->
+    <link rel="stylesheet" href="css/theme.css" />
 
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/floating.css" />
@@ -17,6 +31,9 @@
   </head>
 
   <body>
+    <!-- dark/light theme toggle (defaults to dark) -->
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between dark and light theme" title="Toggle theme">🌙</button>
+
     <!-- >>> begin sidebar <<<  -->
     <div class="sidebar">
       <div class="logo-details">
@@ -42,16 +59,16 @@
           <span class="tooltip">Education & Work</span>
         </li> -->
 
-        <!-- <li>
-          <a href="bookshelf.html">
+        <li>
+          <a href="https://www.goodreads.com/user/show/195966969-debmalya-pramanik" target="_blank">
             <i class="bx bxs-book-bookmark"></i>
             <span class="links_name">My Bookshelf</span>
           </a>
           <span class="tooltip">My Bookshelf</span>
-        </li> -->
+        </li>
 
         <li>
-          <a href="http://ds-gringotts.readthedocs.io/" target="_blank">
+          <a href="https://ds-gringotts.readthedocs.io/" target="_blank">
             <i class="bx bx-code-alt"></i>
             <span class="links_name">Code Documentations</span>
           </a>
@@ -115,7 +132,7 @@
               <h2 class="subtitle">Do you have any questions ?</h2>
               <p class="subtitle-text">Let's Connect!</p>
               <div class="contact-details">
-                <a href="" class="btn btn-default">
+                <a href="mailto:debmalyapramanik.005@gmail.com" class="btn btn-default">
                   <span class="position-relative"> Contact Me </span>
                 </a>
                 <div>
@@ -163,5 +180,6 @@
         });
       });
     </script>
+    <script src="js/theme.js"></script>
   </body>
 </html>

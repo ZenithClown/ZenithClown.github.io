@@ -16,7 +16,7 @@
 }
 
 .floating-container:hover .floating-button {
-    box-shadow: 0 10px 25px rgba(44, 179, 240, 0.6);
+    box-shadow: 0 10px 25px rgba(46, 204, 143, 0.6);
     transform: translateY(300px);
     transition: all 0.3s;
 }
@@ -25,7 +25,7 @@
     position: absolute;
     width: 65px;
     height: 65px;
-    background: #2cb3f0;
+    background: var(--sly-green);
     border-radius: 50%;
     left: 0;
     right: 0;
@@ -34,7 +34,7 @@
     text-align: center;
     font-size: 23px;
     z-index: 100;
-    box-shadow: 0 10px 25px -5px rgba(44, 179, 240, 0.6);
+    box-shadow: 0 10px 25px -5px rgba(46, 204, 143, 0.6);
     cursor: pointer;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -57,13 +57,13 @@
 }
 
 .float-element:nth-child(1) {
-    background: #42A5F5;
-    box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+    background: var(--sly-green-bright);
+    box-shadow: 0 20px 20px -10px rgba(46, 204, 143, 0.5);
 }
 
 .float-element:nth-child(2) {
-    background: #BB001B;
-    box-shadow: 0 20px 20px -10px rgba(190, 67, 67, 0.5);
+    background: var(--sly-green);
+    box-shadow: 0 20px 20px -10px rgba(26, 122, 79, 0.5);
 }
 
 .float-element:nth-child(3) {

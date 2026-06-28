@@ -19,6 +19,16 @@
   <!-- normalize all browser -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
+  <!-- theme: set before paint to avoid a flash of the wrong theme (default: dark) -->
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("sly-theme") || "dark");
+    })();
+  </script>
+
+  <!-- Slytherin theme tokens (must load first) -->
+  <link rel="stylesheet" href="./css/theme.css">
+
   <!-- add style sheets -->
   <link rel="stylesheet" href="./css/photography/style.css">
   <link rel="stylesheet" href="./css/photography/animation.css">
@@ -31,6 +41,9 @@
 </head>
 
 <body>
+  <!-- dark/light theme toggle (defaults to dark) -->
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between dark and light theme" title="Toggle theme">🌙</button>
+
   <div class="imgLoader"></div>
 
   <div class="container">
@@ -87,6 +100,8 @@
   <a href="index.html" class="homeLink" target="_top">
     <img src="./assets/images/house.png" /><br>↩<code>homepage</code>
   </a>
+
+  <script src="./js/theme.js"></script>
 
 </body>
 

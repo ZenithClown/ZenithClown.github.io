@@ -15,7 +15,7 @@
           <a href = "https://www.hackerrank.com/dPramanik"><img height="16" width="16" src="https://unpkg.com/simple-icons@v3/icons/hackerrank.svg"/></a>
           <br>
           <a href = "https://web.whatsapp.com/send?phone=917980092850"><img src = "https://img.shields.io/badge/Contact%20Me-(%2B91)%2079800%2092850-lightgrey?style=plastic&logo=whatsapp"></a>
-          <a href="mailto:dPramanik.official@gmail.com"><img src = "https://img.shields.io/badge/Contact%20Me-Email-lightgrey?style=plastic&logo=gmail"></a>
+          <a href="mailto:debmalyapramanik.005@gmail.com"><img src = "https://img.shields.io/badge/Contact%20Me-Email-lightgrey?style=plastic&logo=gmail"></a>
           <br>
           <img src = "https://img.shields.io/badge/Code-Passing-blue?style=plastic&logo=latex">
           <img alt="GitHub" src="https://img.shields.io/github/license/ZenithClown/minimalist-resume?style=plastic">

@@ -20,13 +20,13 @@
   padding: 0 10px;
   box-sizing: border-box;
   font-family: "Pathway Gothic One", sans-serif;
-  color: #fff;
+  color: var(--sly-green-bright);
 }
 .timeline__content-desc {
   margin: 0;
   font-size: 15px;
   box-sizing: border-box;
-  color: #000;
+  color: var(--sly-text);
   font-family: Cardo;
   font-weight: normal;
   line-height: 25px;
@@ -38,7 +38,7 @@
   height: 100%;
   margin-left: -1px;
   content: "";
-  background: rgba(0, 0, 0, 0.07);
+  background: var(--sly-border);
 }
 @media only screen and (max-width: 767px) {
   .timeline:before {
@@ -61,10 +61,10 @@
   letter-spacing: 3px;
   width: 100%;
   position: absolute;
-  color: #000;
+  color: var(--sly-text-muted);
   font-size: 13px;
   font-family: "Pathway Gothic One", sans-serif;
-  border-left: 2px solid #000;
+  border-left: 2px solid var(--sly-green);
   top: 70%;
   margin-top: -5px;
   padding-left: 15px;
@@ -80,7 +80,7 @@
   left: calc(-100% - 56px);
   padding-left: 0;
   border-left: none;
-  border-right: 2px solid #000;
+  border-right: 2px solid var(--sly-green);
   padding-right: 15px;
 }
 .timeline-item--active {
@@ -132,7 +132,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--sly-overlay);
   content: "";
 }
 .timeline-header {
@@ -142,14 +142,14 @@
   position: relative;
 }
 .timeline-header__title {
-  color: #000;
+  color: var(--sly-green-bright);
   font-size: 76px;
   font-family: "Kolker Brush", sans-serif;
   font-weight: normal;
   margin: 0;
 }
 .timeline-header__subtitle {
-  color: #000;
+  color: var(--sly-text);
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 5px;

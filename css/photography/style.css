@@ -8,8 +8,9 @@
 
 body {
   font-family: "Indie Flower", cursive;
-  background-color: rgba(59, 84, 102, 0.5);
-  color: #555;
+  background: var(--sly-bg);
+  background-image: var(--sly-gradient);
+  color: var(--sly-text-muted);
   text-align: center;
   padding: 4em 0;
   overflow: hidden;
@@ -18,7 +19,7 @@ body {
 .container {
   position: relative;
   width: 80vw;
-  border: rgb(0, 0, 0) solid 2px;
+  border: var(--sly-border) solid 2px;
   border-radius: 4px;
   height: 70vh;
 }
@@ -65,7 +66,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: #555;
+  background-color: var(--sly-green);
   width: 10px;
   height: 10px;
   border-radius: 50%;

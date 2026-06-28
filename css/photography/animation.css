@@ -49,12 +49,12 @@
 .page {
   width: 210px;
   height: 300px;
-  background-color: #bbb;
+  background-color: var(--sly-bg-card);
   position: absolute;
   top: 0px;
   right: 50%;
   transform-origin: 100% 100%;
-  border: solid #555 2px;
+  border: solid var(--sly-border) 2px;
   background-size: 420px 300px;
   background-position: center;
   transform-style: preserve-3d;

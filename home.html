@@ -20,6 +20,16 @@
     <!-- !!! Google Site Verification for Page Indexing !!! -->
     <meta name="google-site-verification" content="ZeaUYtgWMDFeVFqyu7bg1NPTsBfWaIog9DnOkWACF9w" />
 
+    <!-- theme: set before paint to avoid a flash of the wrong theme (default: dark) -->
+    <script>
+      (function () {
+        document.documentElement.setAttribute("data-theme", localStorage.getItem("sly-theme") || "dark");
+      })();
+    </script>
+
+    <!-- Slytherin theme tokens (must load first) -->
+    <link rel="stylesheet" href="css/theme.css" />
+
     <!-- !!! Normalize Content for All Browser(s) !!! -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
 
@@ -27,28 +37,21 @@
     <title>Debmalya Pramanik | IIT - Experienced Data Scientist (Manager)</title>
 
     <!-- !!! Style Sheets :: External Source(s) !!! -->
-    <!-- Globally Using Box-Icons :: https://boxicons.com/ Select "font" to Add Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+    <!-- Font Awesome 6 (brand icons) + Box-Icons :: https://boxicons.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-    <!-- !!! Style Sheets :: `./styles/` Directory !!! -->
+    <!-- !!! Style Sheets :: `./css/` Directory !!! -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
     <link rel="stylesheet" href="css/floating.css" />
     <link rel="stylesheet" href="css/social-buttons.css" />
-
-    <!-- boxicons -->
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   </head>
 
   <body>
+    <!-- dark/light theme toggle (defaults to dark) -->
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between dark and light theme" title="Toggle theme">🌙</button>
+
     <!-- >>> begin sidebar <<<  -->
     <div class="sidebar">
       <div class="logo-details">
@@ -74,16 +77,16 @@
           <span class="tooltip">Education & Work</span>
         </li> -->
 
-        <!-- <li>
-          <a href="bookshelf.html">
+        <li>
+          <a href="https://www.goodreads.com/user/show/195966969-debmalya-pramanik" target="_blank">
             <i class="bx bxs-book-bookmark"></i>
             <span class="links_name">My Bookshelf</span>
           </a>
           <span class="tooltip">My Bookshelf</span>
-        </li> -->
+        </li>
 
         <li>
-          <a href="http://ds-gringotts.readthedocs.io/" target="_blank">
+          <a href="https://ds-gringotts.readthedocs.io/" target="_blank">
             <i class="bx bx-code-alt"></i>
             <span class="links_name">Code Documentations</span>
           </a>
@@ -278,18 +281,6 @@
 
     <!-- load all script files -->
     <script src="js/sidebar.js"></script>
-
-    <script>
-      // Materialize - Initializers
-      $(document).ready(function () {
-        $(".scrollspy").scrollSpy();
-        // Initialize collapse button
-        $(".button-collapse").sideNav({
-          menuWidth: 190, // Default is 240
-          edge: "left", // Choose the horizontal origin
-          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        });
-      });
-    </script>
+    <script src="js/theme.js"></script>
   </body>
 </html>

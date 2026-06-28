@@ -1,16 +1,12 @@
+/*
+ * Colour tokens now live in css/theme.css (loaded first on every page).
+ * The page aliases below are theme-driven so the existing rules in this file
+ * pick up the active Slytherin palette. Sidebar colours are owned by theme.css.
+ */
 :root {
-  /* Primary Color Choice :: `pr` - Primary, `bg` - Background */
-  --pr-color: #e4e9f7;
-  --bg-color: #fff;
-
-  /* Landing Page Color Choices :: Typically for `index.html` Page */
-  --landing-bg-color: rgba(90, 139, 123, 0.4);
-
-  /* Sidebar Color Choices :: Dark/Light Color Scheme */
-  --sidebar-dark: #11101d;
-  --sidebar-light: #fff;
-  --sidebar-box-shadow: rgba(0, 0, 0, 0.3);
-  --sidebar-profile-bg: #1d1b31;
+  --pr-color: var(--sly-bg);
+  --bg-color: var(--sly-bg-elev);
+  --landing-bg-color: var(--sly-overlay);
 }
 
 * {
@@ -36,62 +32,63 @@ body {
     margin: auto;
   }
 
+  /* Fluid type scale :: clamp() self-constrains across all viewports */
   h1 {
-    font-size: calc(1.375rem + 1.5vw);
+    font-size: clamp(1.375rem, 1.2rem + 1.5vw, 2.5rem);
   }
 
   h2 {
-    font-size: calc(1.325rem + 0.9vw);
+    font-size: clamp(1.325rem, 1.2rem + 0.9vw, 2rem);
   }
 
   h3 {
-    font-size: calc(1.3rem + 0.6vw);
+    font-size: clamp(1.3rem, 1.2rem + 0.6vw, 1.75rem);
   }
 
   h4 {
-    font-size: calc(1.275rem + 0.3vw);
+    font-size: clamp(1.275rem, 1.2rem + 0.3vw, 1.5rem);
   }
 
   h5 {
-    font-size: calc(1.25rem + 0.3vw);
+    font-size: clamp(1.25rem, 1.2rem + 0.3vw, 1.4rem);
   }
 
   h6 {
-    font-size: calc(1.15rem + 0.3vw);
+    font-size: clamp(1.15rem, 1.1rem + 0.3vw, 1.3rem);
   }
 
   .big-font-1 {
-    font-size: calc(1.725rem + 5vw);
+    font-size: clamp(1.725rem, 1rem + 5vw, 6rem);
   }
 
   .big-font-2 {
-    font-size: calc(1.625rem + 4.5vw);
+    font-size: clamp(1.625rem, 1rem + 4.5vw, 5.5rem);
   }
 
   .big-font-3 {
-    font-size: calc(1.525rem + 3.5vw);
+    font-size: clamp(1.525rem, 1rem + 3.5vw, 4.5rem);
   }
 
   .big-font-4 {
-    font-size: calc(1.425rem + 1.5vw);
+    font-size: clamp(1.425rem, 1rem + 1.5vw, 3rem);
   }
 
   .big-font-5 {
-    font-size: calc(1rem + 1vw);
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   }
 
   .big-font-5-center {
     text-align: center;
-    font-size: calc(1rem + 1vw);
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
   }
 
   .big-font-6-center {
     text-align: center;
-    font-size: calc(0.7rem + 0.7vw);
+    font-size: clamp(0.7rem, 0.5rem + 0.7vw, 1.2rem);
   }
 
   .small-font {
-    font-size: calc(0.6rem + 0.6vw);
+    font-size: clamp(0.6rem, 0.5rem + 0.6vw, 1rem);
   }
 
   .reference {
@@ -119,7 +116,7 @@ body {
 }
 
 .landing {
-  background-color: #081f1c;
+  background-color: var(--sly-emerald-deep);
   background-size: contain;
 }
 
@@ -148,7 +145,7 @@ body {
 .footer {
   /* Footer Element for bookshelf.html Page */
   position: fixed;
-  background-color: lightgray;
+  background-color: var(--sly-bg-elev);
   bottom: 0;
   width: 100%;
 }
@@ -222,10 +219,10 @@ sub {
 .about-content .main-title {
   font-size: 36px;
   margin: 0;
-  color: #081f1c;
+  color: var(--sly-text);
 }
 .about-content .main-title .name {
-  color: #239746;
+  color: var(--sly-green-bright);
 }
 .about-content .main-title .dblock {
   display: block;
@@ -240,7 +237,7 @@ sub {
   margin: 14px 0;
   width: 20px;
   height: 3px;
-  background: #081f1c;
+  background: var(--sly-green);
   display: inline-block;
   margin-right: 15px;
 }
@@ -255,7 +252,7 @@ sub {
 }
 .about-content .img-fluid {
   max-width: 100%;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--img-blend);
 }
 .about-content .icon-btn {
   height: 36px;
@@ -277,7 +274,7 @@ sub {
 }
 .skills-section {
   padding: 60px 0;
-  background: #fff;
+  background: var(--sly-bg-elev);
   margin-top: 30px;
 }
 .subtitle {
@@ -285,7 +282,7 @@ sub {
   margin: 0 0 30px;
   text-align: center;
   position: relative;
-  color: #081f1c;
+  color: var(--sly-text);
 }
 .subtitle::after {
   content: "";
@@ -296,7 +293,7 @@ sub {
   margin: 0 auto;
   width: 80px;
   height: 3px;
-  background: #081f1c;
+  background: var(--sly-green);
 }
 .subtitle-text {
   text-align: center;
@@ -311,19 +308,23 @@ sub {
 }
 .skills-icons .icons {
   margin: 15px 7px 0;
-  border: 1px solid #ededed;
+  border: 1px solid var(--sly-border);
+  background: var(--sly-surface);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   padding: 7px;
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 100px;
   max-width: 100px;
-  transition: all 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skills-icons .icons:hover {
   transform: translateY(-5px);
+  box-shadow: var(--sly-glow);
 }
 .skills-icons .icons img {
   height: 55px;
@@ -332,8 +333,11 @@ sub {
   padding: 60px 0;
 }
 .app-info {
-  background: #f4fafa;
-  background: linear-gradient(77deg, #f4fafa 100%, #f3f5f4 100%);
+  background: var(--sly-surface);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--sly-border);
+  box-shadow: var(--sly-glow);
   position: relative;
   padding: 50px;
   border-radius: 30px;
@@ -356,17 +360,19 @@ sub {
   bottom: 0;
   top: auto !important;
   width: 260px;
-  mix-blend-mode: multiply;
+  mix-blend-mode: var(--img-blend);
 }
 .app-info a.btn-default {
   text-decoration: none;
-  background: #1d1b31;
+  background: var(--sly-green);
   padding: 10px 24px;
   border-radius: 5px;
   color: #fff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .app-info a.btn-default:hover {
-  background: #009688;
+  background: var(--sly-green-bright);
+  box-shadow: var(--sly-glow);
 }
 /* projects */
 ul.accordion-list {
@@ -377,10 +383,12 @@ ul.accordion-list li {
   display: block;
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background: var(--sly-surface);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   padding: 20px 20px 20px 30px;
   margin: 0 auto 20px auto;
-  border: 1px solid #c9d7ff;
+  border: 1px solid var(--sly-border);
   border-radius: 12px;
   cursor: pointer;
 }
@@ -405,7 +413,7 @@ ul.accordion-list li h3:after {
   position: absolute;
   right: 0;
   top: 0;
-  color: #1d1b31;
+  color: var(--sly-green-bright);
   transition: all 0.3s ease-in-out;
   font-size: 18px;
 }
@@ -438,7 +446,7 @@ ul.accordion-list li .img-box {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px solid #c9d7ff;
+  border: 1px solid var(--sly-border);
   overflow: hidden;
 }
 ul.accordion-list li .img-box img {
@@ -453,21 +461,21 @@ ul.accordion-list li .img-box img {
 }
 .contact-details .alink {
   font-size: 14px;
-  color: #11101d;
+  color: var(--sly-text);
   text-decoration: none;
   margin: 5px 10px;
   display: inline-block;
   word-break: break-all;
 }
 .contact-details .alink:hover {
-  color: #009688;
+  color: var(--sly-green-bright);
 }
 .contact-frame {
   width: 100%;
-  background: #fff;
+  background: var(--sly-bg-elev);
   height: 460px;
   border-radius: 10px;
-  box-shadow: 0 0 40px #36363621;
+  box-shadow: 0 0 40px var(--sly-shadow);
   margin: 30px 0 0;
 }
 

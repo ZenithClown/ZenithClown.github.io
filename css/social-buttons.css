@@ -38,7 +38,8 @@
 }
 
 .fa-github {
-  color: #181717;
+  /* adaptive: light glyph on dark theme, dark glyph on light theme */
+  color: var(--sly-text);
 }
 
 .fa-gitlab {

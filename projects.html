@@ -6,7 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Projects</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta name="description"
+    content="Open-source (FOSS) projects by Debmalya Pramanik, including the pandas-wizard Python utility module and earlier deprecated work." />
+
+  <!-- theme: set before paint to avoid a flash of the wrong theme (default: dark) -->
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("sly-theme") || "dark");
+    })();
+  </script>
+
+  <!-- Slytherin theme tokens (must load first) -->
+  <link rel="stylesheet" href="css/theme.css">
 
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/sidebar.css">
@@ -45,16 +57,16 @@
         <span class="tooltip">Education & Work</span>
       </li> -->
 
-      <!-- <li>
-        <a href="bookshelf.html">
-          <i class="bx bxs-book-bookmark"></i>
-          <span class="links_name">My Bookshelf</span>
-        </a>
-        <span class="tooltip">My Bookshelf</span>
-      </li> -->
+        <li>
+          <a href="https://www.goodreads.com/user/show/195966969-debmalya-pramanik" target="_blank">
+            <i class="bx bxs-book-bookmark"></i>
+            <span class="links_name">My Bookshelf</span>
+          </a>
+          <span class="tooltip">My Bookshelf</span>
+        </li>
 
       <li>
-        <a href="http://ds-gringotts.readthedocs.io/" target="_blank">
+        <a href="https://ds-gringotts.readthedocs.io/" target="_blank">
           <i class="bx bx-code-alt"></i>
           <span class="links_name">Code Documentations</span>
         </a>
@@ -93,6 +105,9 @@
   <!-- >>> end sidebar <<<  -->
 
   <main class="main-content-section">
+    <!-- dark/light theme toggle (defaults to dark) -->
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch between dark and light theme" title="Toggle theme">🌙</button>
+
     <section class="content-container">
       <h1 class="subtitle">My Projects</h1>
       <p class="subtitle-text">
@@ -121,7 +136,7 @@
       </ul>
     </section>
     <section class="content-container">
-      <h1 class="subtitle">Deprecated Projects</h1>
+      <h2 class="subtitle">Deprecated Projects</h2>
       <p class="subtitle-text">
         A list of previously working projects which are now deprecated. Check new version details.
       </p>
@@ -210,6 +225,7 @@
 
     });
   </script>
+  <script src="js/theme.js"></script>
 </body>
 
 </html>
