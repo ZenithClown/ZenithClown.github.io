@@ -73,6 +73,10 @@ html {
 body {
   background: var(--sly-bg);
   color: var(--sly-text);
+  /* style.css zeroes these via its global reset, but timeline.html and
+     photography.html do not load it, so set them here for layout parity. */
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* `html` prefix raises specificity so the fluid gradient wins over the flat

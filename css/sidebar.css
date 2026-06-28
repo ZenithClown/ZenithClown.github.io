@@ -1,5 +1,16 @@
 /* CSS Property to Control Sidebar Element */
 
+/* Self-contained box model + list reset so the rail renders identically on
+   pages that do NOT load style.css (e.g. timeline.html). Without this the
+   default <ul> padding pushes the icons right and content-box widens the
+   rail past 78px. */
+.sidebar,
+.sidebar *,
+.sidebar *::before,
+.sidebar *::after {
+  box-sizing: border-box;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -70,6 +81,8 @@
 .sidebar .nav-list {
   margin-top: 20px;
   height: 100%;
+  padding: 0;
+  list-style: none;
 }
 
 .sidebar li {
@@ -84,6 +97,7 @@
   left: calc(100% + 15px);
   z-index: 3;
   background: var(--sidebar-light);
+  color: var(--sidebar-dark);
   box-shadow: 0 5px 10px var(--sidebar-box-shadow);
   padding: 6px 12px;
   border-radius: 4px;
